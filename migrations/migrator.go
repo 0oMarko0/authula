@@ -51,15 +51,6 @@ const (
 // MigratorOption configures optional Migrator behavior.
 type MigratorOption func(*Migrator)
 
-// WithTableName overrides the schema migrations table name.
-func WithTableName(name string) MigratorOption {
-	return func(m *Migrator) {
-		if strings.TrimSpace(name) != "" {
-			m.table = name
-		}
-	}
-}
-
 // NewMigrator constructs a Migrator backed by the provided Bun database.
 func NewMigrator(db bun.IDB, logger Logger, opts ...MigratorOption) (*Migrator, error) {
 	bunDB, ok := db.(*bun.DB)
@@ -82,23 +73,15 @@ func NewMigrator(db bun.IDB, logger Logger, opts ...MigratorOption) (*Migrator, 
 }
 
 type schemaMigration struct {
-	PluginID  string    `bun:"plugin_id,pk"`
-	Version   string    `bun:",pk"`
-	AppliedAt time.Time `bun:",nullzero,notnull,default:current_timestamp"`
-}
+	bun.BaseModel `bun:"table:auth_schema_migrations"`
 
-// AppliedMigration represents a persisted migration entry for introspection.
-type AppliedMigration struct {
-	PluginID  string
-	Version   string
-	AppliedAt time.Time
+	PluginID  string    `bun:"column:plugin_id,pk"`
+	Version   string    `bun:"column:version,pk"`
+	AppliedAt time.Time `bun:"column:applied_at,nullzero,notnull,default:current_timestamp"`
 }
 
 func (m *Migrator) ensureTable(ctx context.Context) error {
-	if err := m.createSchemaTable(ctx); err != nil {
-		return err
-	}
-	return m.ensureAppliedAtIndex(ctx)
+	return m.createSchemaTable(ctx)
 }
 
 func (m *Migrator) createSchemaTable(ctx context.Context) error {
@@ -485,29 +468,6 @@ func dedupeStrings(values []string) []string {
 		result = append(result, value)
 	}
 	return result
-}
-
-func (m *Migrator) ensureAppliedAtIndex(ctx context.Context) error {
-	indexName := fmt.Sprintf("%s_plugin_applied_idx", sanitizeIdentifier(m.table))
-	stmt := fmt.Sprintf("CREATE INDEX IF NOT EXISTS %s ON %s (plugin_id, applied_at)", indexName, m.table)
-
-	if m.dialect == "mysql" {
-		stmt = fmt.Sprintf("CREATE INDEX %s ON %s (plugin_id, applied_at)", indexName, m.table)
-	}
-
-	if _, err := m.db.ExecContext(ctx, stmt); err != nil {
-		if m.dialect == "mysql" && strings.Contains(strings.ToLower(err.Error()), "duplicate key name") {
-			return nil
-		}
-		return fmt.Errorf("ensure index on %s: %w", m.table, err)
-	}
-
-	return nil
-}
-
-func sanitizeIdentifier(value string) string {
-	replacer := strings.NewReplacer("`", "", "\"", "", ".", "_", " ", "_")
-	return replacer.Replace(value)
 }
 
 // ExecStatements executes statements sequentially, skipping blanks.
