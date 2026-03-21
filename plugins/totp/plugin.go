@@ -4,14 +4,14 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/repository"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/systems"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/migrations"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/totp/repository"
+	"github.com/Authula/authula/plugins/totp/services"
+	"github.com/Authula/authula/plugins/totp/systems"
+	"github.com/Authula/authula/plugins/totp/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type TOTPPlugin struct {

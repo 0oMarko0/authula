@@ -11,11 +11,11 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	internaltests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	totpplugin "github.com/GoBetterAuth/go-better-auth/v2/plugins/totp"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/repository"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
+	internaltests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/migrations"
+	totpplugin "github.com/Authula/authula/plugins/totp"
+	"github.com/Authula/authula/plugins/totp/repository"
+	"github.com/Authula/authula/plugins/totp/types"
 )
 
 func newTestTOTPDB(t *testing.T) *bun.DB {

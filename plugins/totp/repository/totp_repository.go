@@ -7,8 +7,8 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/plugins/totp/types"
 )
 
 type TOTPRepository struct {

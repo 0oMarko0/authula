@@ -3,7 +3,7 @@ package repositories
 import (
 	"context"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
+	"github.com/Authula/authula/plugins/admin/types"
 )
 
 type UserStateRepository interface {

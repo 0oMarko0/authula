@@ -1,6 +1,6 @@
 package secondarystorage
 
-import "github.com/GoBetterAuth/go-better-auth/v2/models"
+import "github.com/Authula/authula/models"
 
 // SecondaryStorageAPI is the API exposed by the secondary storage plugin
 type SecondaryStorageAPI interface {

@@ -11,7 +11,7 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 )
 
 // Helper function to create an in-memory SQLite database for testing

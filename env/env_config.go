@@ -36,12 +36,12 @@ const (
 
 	EnvEventBusConsumerGroup = "EVENT_BUS_CONSUMER_GROUP"
 
-	// GO BETTER AUTH
+	// AUTHULA
 
-	EnvConfigPath  = "GO_BETTER_AUTH_CONFIG_PATH"
-	EnvBaseURL     = "GO_BETTER_AUTH_BASE_URL"
-	EnvSecret      = "GO_BETTER_AUTH_SECRET"
-	EnvDatabaseURL = "GO_BETTER_AUTH_DATABASE_URL"
+	EnvConfigPath  = "AUTHULA_CONFIG_PATH"
+	EnvBaseURL     = "AUTHULA_BASE_URL"
+	EnvSecret      = "AUTHULA_SECRET"
+	EnvDatabaseURL = "AUTHULA_DATABASE_URL"
 
 	// ENVIRONMENT
 

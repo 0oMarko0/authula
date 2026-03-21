@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/oauth2/types"
+	"github.com/Authula/authula/plugins/oauth2/types"
 )
 
 // ProviderRegistry manages OAuth2 providers

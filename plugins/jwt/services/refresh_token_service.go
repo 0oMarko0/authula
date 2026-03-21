@@ -10,12 +10,12 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/events"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/types"
-	coreservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/jwt/constants"
+	"github.com/Authula/authula/plugins/jwt/events"
+	"github.com/Authula/authula/plugins/jwt/types"
+	coreservices "github.com/Authula/authula/services"
 )
 
 type refreshTokenService struct {

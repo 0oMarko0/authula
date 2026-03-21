@@ -3,10 +3,10 @@ package magiclink
 import (
 	"fmt"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	types "github.com/GoBetterAuth/go-better-auth/v2/plugins/magic-link/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	types "github.com/Authula/authula/plugins/magic-link/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type MagicLinkPlugin struct {

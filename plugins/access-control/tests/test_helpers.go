@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/usecases"
+	"github.com/Authula/authula/plugins/access-control/services"
+	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/Authula/authula/plugins/access-control/usecases"
 )
 
 type mockUserAccessRepository struct {

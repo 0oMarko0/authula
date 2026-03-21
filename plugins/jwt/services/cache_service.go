@@ -9,8 +9,8 @@ import (
 
 	"github.com/lestrrat-go/jwx/v3/jwk"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/repositories"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/jwt/repositories"
 )
 
 const jwksCacheKey = "jwks:public:set"

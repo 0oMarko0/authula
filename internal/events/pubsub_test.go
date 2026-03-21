@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 )
 
 // newTestGoChannelPubSub creates a Watermill GoChannel PubSub for testing.

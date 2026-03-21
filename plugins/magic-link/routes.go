@@ -3,8 +3,8 @@ package magiclink
 import (
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/magic-link/handlers"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/magic-link/handlers"
 )
 
 func Routes(p *MagicLinkPlugin) []models.Route {

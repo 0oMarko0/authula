@@ -1,10 +1,10 @@
-package gobetterauth
+package authula
 
 import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -6,10 +6,10 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/migrationmanager"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/migrationmanager"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/services"
 )
 
 // PluginRegistry manages plugin registration and lifecycle

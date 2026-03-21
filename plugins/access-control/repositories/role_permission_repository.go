@@ -8,7 +8,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/types"
+	"github.com/Authula/authula/plugins/access-control/types"
 )
 
 type BunRolePermissionRepository struct {

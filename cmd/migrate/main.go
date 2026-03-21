@@ -12,20 +12,20 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/uptrace/bun"
 
-	gobetterauth "github.com/GoBetterAuth/go-better-auth/v2"
-	"github.com/GoBetterAuth/go-better-auth/v2/cmd/shared/configloader"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/bootstrap"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/migrationmanager"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	authula "github.com/Authula/authula"
+	"github.com/Authula/authula/cmd/shared/configloader"
+	"github.com/Authula/authula/internal/bootstrap"
+	"github.com/Authula/authula/internal/migrationmanager"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/migrations"
+	"github.com/Authula/authula/models"
 )
 
 var (
 	rootCmd = &cobra.Command{
 		Use:   "migrate",
-		Short: "Database migration commands for go-better-auth",
-		Long:  "Manage core and plugin migrations for the go-better-auth system",
+		Short: "Database migration commands for Authula",
+		Long:  "Manage core and plugin migrations for the Authula system",
 	}
 	configPath string
 	timeout    int
@@ -34,7 +34,7 @@ var (
 func init() {
 	_ = godotenv.Load(".env")
 
-	rootCmd.PersistentFlags().StringVar(&configPath, "config", getEnv("GBA_CONFIG_PATH", "config.toml"), "Path to config file")
+	rootCmd.PersistentFlags().StringVar(&configPath, "config", getEnv("AUTHULA_CONFIG_PATH", "config.toml"), "Path to config file")
 	rootCmd.PersistentFlags().IntVar(&timeout, "timeout", 30, "Timeout in seconds for migration operations (default: 30s)")
 
 	rootCmd.AddCommand(
@@ -232,8 +232,8 @@ func bootstrapRuntime(configPath string) (*runtimeEnv, error) {
 		slog.Debug("No config file found, using defaults", "path", configPath)
 	}
 
-	logger := gobetterauth.InitLogger(config)
-	db, err := gobetterauth.InitDatabase(config, logger, config.Logger.Level)
+	logger := authula.InitLogger(config)
+	db, err := authula.InitDatabase(config, logger, config.Logger.Level)
 	if err != nil {
 		return nil, fmt.Errorf("init database: %w", err)
 	}

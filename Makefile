@@ -1,5 +1,5 @@
 # Variables
-APP_NAME=go-better-auth
+APP_NAME=authula
 BINARY_PATH=./tmp/$(APP_NAME)
 MIGRATE_CONFIG?=./config.toml
 MIGRATE_ARGS?=

@@ -9,8 +9,8 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/types"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/access-control/types"
 )
 
 func setupRepoDB(t *testing.T) *bun.DB {

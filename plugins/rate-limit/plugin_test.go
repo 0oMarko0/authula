@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 )
 
 // TestInMemoryProvider tests the in-memory rate limit provider

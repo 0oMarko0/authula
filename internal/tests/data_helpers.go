@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 )
 
 func PtrString(s string) *string {

@@ -3,8 +3,8 @@ package totp
 import (
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/handlers"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/totp/handlers"
 )
 
 func Routes(p *TOTPPlugin) []models.Route {

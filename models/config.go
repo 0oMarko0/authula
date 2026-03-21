@@ -3,10 +3,10 @@ package models
 import (
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/events"
+	"github.com/Authula/authula/events"
 )
 
-// Config holds the core configuration for GoBetterAuth.
+// Config holds the core configuration for Authula.
 type Config struct {
 	// Core identity
 	AppName      string             `json:"app_name" toml:"app_name"`

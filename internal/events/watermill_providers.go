@@ -22,9 +22,9 @@ import (
 	"github.com/redis/go-redis/v9"
 	"zombiezen.com/go/sqlite/sqlitex"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/env"
-	"github.com/GoBetterAuth/go-better-auth/v2/events"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/env"
+	"github.com/Authula/authula/events"
+	"github.com/Authula/authula/models"
 )
 
 // InitWatermillProvider initializes a Watermill PubSub based on the provider config
@@ -207,7 +207,7 @@ func initRedis(logger watermill.LoggerAdapter, config *models.RedisConfig) (mode
 		if config.ConsumerGroup != "" {
 			consumerGroup = config.ConsumerGroup
 		} else {
-			consumerGroup = "gobetterauth_consumer_group"
+			consumerGroup = "authula_consumer_group"
 		}
 	}
 
@@ -261,7 +261,7 @@ func initKafka(logger watermill.LoggerAdapter, config *models.KafkaConfig) (mode
 		if config != nil && config.ConsumerGroup != "" {
 			consumerGroup = config.ConsumerGroup
 		} else {
-			consumerGroup = "gobetterauth_consumer_group"
+			consumerGroup = "authula_consumer_group"
 		}
 	}
 

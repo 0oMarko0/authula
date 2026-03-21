@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/types"
+	"github.com/Authula/authula/plugins/access-control/services"
+	"github.com/Authula/authula/plugins/access-control/types"
 )
 
 type stubUserAccessRepo struct {

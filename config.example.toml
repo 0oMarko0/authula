@@ -1,9 +1,9 @@
-# GoBetterAuth Configuration Example
-# This file demonstrates all available configuration options for GoBetterAuth.
+# Authula Configuration Example
+# This file demonstrates all available configuration options for Authula.
 # Copy this file to config.toml and modify the values as needed.
 
 # Application Name
-app_name = "GoBetterAuth"
+app_name = "Authula"
 
 # Base URL for the application (used as the base url of the API and for redirects, emails, etc.)
 base_url = "http://localhost:8080"
@@ -12,7 +12,7 @@ base_url = "http://localhost:8080"
 base_path = "/auth"
 
 # SECURITY NOTE: It is recommended to set the 'secret' via the 
-# GO_BETTER_AUTH_SECRET environment variable rather than hardcoding it here.
+# AUTHULA_SECRET environment variable rather than hardcoding it here.
 # However if you want, generate using `openssl rand -base64 50 | tr -dc 'A-Za-z0-9' | cut -c -40`
 secret = ""
 
@@ -23,7 +23,7 @@ secret = ""
 [database]
 provider = "sqlite"
 # SECURITY NOTE: It is recommended to set the 'connection_string' via the 
-# GO_BETTER_AUTH_DATABASE_URL environment variable rather than hardcoding it here.
+# AUTHULA_DATABASE_URL environment variable rather than hardcoding it here.
 url = "auth.db"
 max_open_conns = 25
 max_idle_conns = 5
@@ -41,7 +41,7 @@ level = "debug"  # Options: "debug", "info", "warn", "error"
 # -----------------------------------
 
 [session]
-cookie_name = "gobetterauth.session_token"
+cookie_name = "authula.session_token"
 expires_in = "30m"
 update_age = "5m"
 cookie_max_age = "24h"
@@ -114,14 +114,14 @@ buffer_size = 100
 # [event_bus.redis]
 # Prefer to use EVENT_BUS_REDIS_URL environment variable to set the URL
 # url = "redis://localhost:6379/0"
-# consumer_group = "gobetterauth_consumer_group"
+# consumer_group = "authula_consumer_group"
 
 # Kafka Configuration
 # For high-throughput, distributed event streaming
 # provider = "kafka"
 # [event_bus.kafka]
 # brokers = "localhost:9092"
-# consumer_group = "gobetterauth_consumer_group"
+# consumer_group = "authula_consumer_group"
 
 # NATS Configuration
 # Lightweight, cloud-native messaging
@@ -205,8 +205,8 @@ tls_mode = "starttls" # Options: "off", "starttls", "tls"
 
 [plugins.csrf]
 enabled = true
-cookie_name = "gobetterauth_csrf_token"
-header_name = "X-GOBETTERAUTH-CSRF-TOKEN"
+cookie_name = "authula_csrf_token"
+header_name = "X-AUTHULA-CSRF-TOKEN"
 max_age = "24h"
 secure = false
 same_site = "lax"  # Options: "lax", "strict", "none" (Note: HttpOnly=false and Secure=true are hardcoded for Double-Submit Cookie pattern)

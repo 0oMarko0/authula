@@ -3,9 +3,9 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/usecases"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/totp/types"
+	"github.com/Authula/authula/plugins/totp/usecases"
 )
 
 type GetTOTPURIHandler struct {

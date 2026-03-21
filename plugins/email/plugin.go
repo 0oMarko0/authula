@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/email/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/email/providers"
-	emailtypes "github.com/GoBetterAuth/go-better-auth/v2/plugins/email/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/email/constants"
+	"github.com/Authula/authula/plugins/email/providers"
+	emailtypes "github.com/Authula/authula/plugins/email/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type EmailPlugin struct {

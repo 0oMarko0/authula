@@ -3,9 +3,9 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/usecases"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/internal/types"
+	"github.com/Authula/authula/internal/usecases"
+	"github.com/Authula/authula/models"
 )
 
 type GetMeHandler struct {

@@ -3,7 +3,7 @@ package bearer
 import (
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 )
 
 type BearerHookID string

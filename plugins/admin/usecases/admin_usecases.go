@@ -4,12 +4,12 @@ import (
 	"context"
 	"time"
 
-	corerepositories "github.com/GoBetterAuth/go-better-auth/v2/internal/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	corerepositories "github.com/Authula/authula/internal/repositories"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/admin/repositories"
+	"github.com/Authula/authula/plugins/admin/services"
+	"github.com/Authula/authula/plugins/admin/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type AdminUseCases struct {

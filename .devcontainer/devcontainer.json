@@ -1,10 +1,10 @@
 {
-  "name": "go-better-auth",
+  "name": "authula",
   "build": {
     "context": ".",
     "dockerfile": "Dockerfile"
   },
-  "workspaceFolder": "/workspaces/go-better-auth",
+  "workspaceFolder": "/workspaces/authula",
   "forwardPorts": [8080],
   "customizations": {
     "vscode": {

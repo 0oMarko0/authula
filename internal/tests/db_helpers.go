@@ -115,7 +115,7 @@ func NewMySQLIntegrationDB(t *testing.T) *bun.DB {
 func NewIntegrationTestDBFromEnv(t *testing.T) (*bun.DB, string) {
 	t.Helper()
 
-	provider := strings.ToLower(strings.TrimSpace(os.Getenv("GO_BETTER_AUTH_TEST_DB")))
+	provider := strings.ToLower(strings.TrimSpace(os.Getenv("AUTHULA_TEST_DB")))
 	if provider == "" {
 		provider = "sqlite"
 	}
@@ -128,7 +128,7 @@ func NewIntegrationTestDBFromEnv(t *testing.T) (*bun.DB, string) {
 	case "mysql":
 		return NewMySQLIntegrationDB(t), "mysql"
 	default:
-		t.Fatalf("unsupported GO_BETTER_AUTH_TEST_DB provider %q (expected sqlite|postgres|mysql)", provider)
+		t.Fatalf("unsupported AUTHULA_TEST_DB provider %q (expected sqlite|postgres|mysql)", provider)
 		return nil, ""
 	}
 }
@@ -180,9 +180,9 @@ func runPostgresContainer(ctx context.Context) (container *tcpostgres.PostgresCo
 	return tcpostgres.Run(
 		ctx,
 		"postgres:18-alpine",
-		tcpostgres.WithDatabase("gobetterauth"),
-		tcpostgres.WithUsername("gobetterauth"),
-		tcpostgres.WithPassword("gobetterauth"),
+		tcpostgres.WithDatabase("authula"),
+		tcpostgres.WithUsername("authula"),
+		tcpostgres.WithPassword("authula"),
 	)
 }
 
@@ -196,9 +196,9 @@ func runMySQLContainer(ctx context.Context) (container *tcmysql.MySQLContainer, 
 	return tcmysql.Run(
 		ctx,
 		"mysql:8.4",
-		tcmysql.WithDatabase("gobetterauth"),
-		tcmysql.WithUsername("gobetterauth"),
-		tcmysql.WithPassword("gobetterauth"),
+		tcmysql.WithDatabase("authula"),
+		tcmysql.WithUsername("authula"),
+		tcmysql.WithPassword("authula"),
 	)
 }
 

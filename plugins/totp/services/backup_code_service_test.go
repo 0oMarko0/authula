@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	coreservices "github.com/GoBetterAuth/go-better-auth/v2/internal/services"
+	coreservices "github.com/Authula/authula/internal/services"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

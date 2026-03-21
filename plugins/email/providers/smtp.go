@@ -9,9 +9,9 @@ import (
 
 	"github.com/wneessen/go-mail"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/email/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/email/types"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/email/constants"
+	"github.com/Authula/authula/plugins/email/types"
 )
 
 type SMTPProvider struct {

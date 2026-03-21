@@ -18,7 +18,7 @@ you have concerns or encounter any unacceptable behavior, please reach out to mt
 
 ### Reporting bugs
 
-We rely on bug reports to enhance this project for all users. To assist us, we have a bug reporting template specifying the necessary details. Ensure you check our [existing bug reports](https://github.com/GoBetterAuth/go-better-auth/issues?q=is%3Aissue+is%3Aopen+label%3Abug) prior to submitting a new one to avoid duplicates.
+We rely on bug reports to enhance this project for all users. To assist us, we have a bug reporting template specifying the necessary details. Ensure you check our [existing bug reports](https://github.com/Authula/authula/issues?q=is%3Aissue+is%3Aopen+label%3Abug) prior to submitting a new one to avoid duplicates.
 
 ### Reporting security issues
 
@@ -28,7 +28,7 @@ Avoid creating a public GitHub issue for security concerns. If you discover a se
 
 To request new features, please create an issue on this project.
 To ensure that we can understand the problem you are looking to solve, please be as detailed as possible.
-To see what other people have already suggested, you can look [here](https://github.com/GoBetterAuth/go-better-auth/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement).
+To see what other people have already suggested, you can look [here](https://github.com/Authula/authula/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement).
 Please be aware that duplicate issues might already exist. If you are creating a new issue, please check existing open, or recently closed. Having a single vote for an issue is far easier for us to prioritise.
 
 ---
@@ -43,9 +43,9 @@ To start contributing:
 - Clone the fork on your workstation:
 
   ```bash
-  $ git clone git@github.com:{YOUR_USERNAME}/go-better-auth.git
+  $ git clone git@github.com:{YOUR_USERNAME}/authula.git
 
-  $ cd go-better-auth
+  $ cd authula
   ```
 
 Choose one of the following development setups:
@@ -57,7 +57,7 @@ Once you have this repo cloned to your local system, you will need to install th
 Then run the following command from the command palette:
 `Dev Containers: Open Folder in Container...`
 
-This will automatically select the workspace folder. But if you need to find the project manually then it is located at `/workspaces/go-better-auth`. You can then proceed to the development section below.
+This will automatically select the workspace folder. But if you need to find the project manually then it is located at `/workspaces/authula`. You can then proceed to the development section below.
 
 2. `Without devcontainers`:
 

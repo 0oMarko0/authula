@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
+	"github.com/Authula/authula/plugins/admin/constants"
+	"github.com/Authula/authula/plugins/admin/repositories"
+	"github.com/Authula/authula/plugins/admin/types"
 )
 
 type StateService struct {

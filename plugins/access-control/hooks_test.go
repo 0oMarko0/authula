@@ -9,10 +9,10 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/usecases"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/access-control/tests"
+	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/Authula/authula/plugins/access-control/usecases"
 )
 
 func newHookTestPluginWithUserAccessRepoMock(t *testing.T) (*AccessControlPlugin, interface {

@@ -1,13 +1,13 @@
-// Package fiber provides a Fiber middleware adapter for go-better-auth.
+// Package fiber provides a Fiber middleware adapter for authula.
 //
-// It bridges Fiber's fasthttp-based context to go-better-auth's standard
+// It bridges Fiber's fasthttp-based context to authula's standard
 // net/http.Handler by manually constructing http.Request objects. This avoids
 // fasthttpadaptor which can lose the request body — a critical issue for
 // authentication payloads.
 //
 // Usage:
 //
-//	auth := gobetterauth.New(&gobetterauth.AuthConfig{...})
+//	auth := authula.New(&authula.AuthConfig{...})
 //
 //	app := fiber.New()
 //	app.Use("/api/auth", fiberadapter.New(fiberadapter.Config{
@@ -24,9 +24,9 @@ import (
 	"github.com/gofiber/fiber/v3"
 )
 
-// Config defines the config for the go-better-auth Fiber adapter middleware.
+// Config defines the config for the authula Fiber adapter middleware.
 type Config struct {
-	// Handler is the go-better-auth http.Handler. Required.
+	// Handler is the authula http.Handler. Required.
 	// Obtain it via auth.Handler().
 	Handler http.Handler `json:"-" toml:"-"`
 
@@ -50,7 +50,7 @@ func configDefault(config Config) Config {
 	return config
 }
 
-// New creates a Fiber middleware that proxies requests to a go-better-auth
+// New creates a Fiber middleware that proxies requests to an authula
 // http.Handler. It manually builds net/http requests from Fiber's fasthttp
 // context to ensure request bodies are preserved correctly.
 func New(config Config) fiber.Handler {

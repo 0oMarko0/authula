@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/magic-link/types"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/magic-link/types"
 )
 
 type exchangeUseCaseTestHarness struct {

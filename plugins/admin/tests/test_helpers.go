@@ -7,11 +7,11 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	adminservices "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/usecases"
+	internaltests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/models"
+	adminservices "github.com/Authula/authula/plugins/admin/services"
+	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/Authula/authula/plugins/admin/usecases"
 )
 
 func PtrString(t *testing.T, s string) *string {

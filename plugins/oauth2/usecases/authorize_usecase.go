@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/oauth2/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/oauth2/types"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/oauth2/services"
+	"github.com/Authula/authula/plugins/oauth2/types"
 )
 
 // AuthorizeUseCase handles the authorization flow initiation

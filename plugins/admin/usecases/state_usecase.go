@@ -4,9 +4,9 @@ import (
 	"context"
 	"strings"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
+	"github.com/Authula/authula/plugins/admin/constants"
+	"github.com/Authula/authula/plugins/admin/services"
+	"github.com/Authula/authula/plugins/admin/types"
 )
 
 type StateUseCase struct {

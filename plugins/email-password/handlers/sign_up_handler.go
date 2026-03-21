@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/email-password/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/email-password/usecases"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/email-password/types"
+	"github.com/Authula/authula/plugins/email-password/usecases"
 )
 
 type SignUpRequestPayload struct {

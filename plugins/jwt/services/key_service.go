@@ -13,12 +13,12 @@ import (
 	"fmt"
 	"time"
 
-	coreservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	coreservices "github.com/Authula/authula/services"
 	"github.com/google/uuid"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/types"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/jwt/repositories"
+	"github.com/Authula/authula/plugins/jwt/types"
 )
 
 type keyService struct {

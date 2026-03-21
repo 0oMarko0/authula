@@ -12,7 +12,7 @@ import (
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/google/uuid"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 )
 
 type handlerEntry struct {

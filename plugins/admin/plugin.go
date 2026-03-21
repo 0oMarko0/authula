@@ -3,14 +3,14 @@ package admin
 import (
 	"fmt"
 
-	coreinternalrepos "github.com/GoBetterAuth/go-better-auth/v2/internal/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/usecases"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	coreinternalrepos "github.com/Authula/authula/internal/repositories"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/migrations"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/admin/repositories"
+	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/Authula/authula/plugins/admin/usecases"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type AdminPlugin struct {

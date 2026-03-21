@@ -1,4 +1,4 @@
-# GoBetterAuth Project Guidelines
+# Authula Project Guidelines
 
 ### Code Style Guide
 

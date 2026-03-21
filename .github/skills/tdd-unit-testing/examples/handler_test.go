@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	internaltests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/models"
 )
 
 type Todo struct {

@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/usecases"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/Authula/authula/plugins/admin/usecases"
 )
 
 type CreateUserHandler struct {

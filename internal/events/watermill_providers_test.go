@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 	"github.com/ThreeDotsLabs/watermill"
 )
 
@@ -203,8 +203,8 @@ func TestInitWatermillProvider_Postgres_NilConfig(t *testing.T) {
 }
 
 func TestInitWatermillProvider_SQLite_DefaultPath(t *testing.T) {
-	if os.Getenv("GO_BETTER_AUTH_TEST_DB") != "" && os.Getenv("GO_BETTER_AUTH_TEST_DB") != "sqlite" {
-		t.Skip("skipping SQLite test when GO_BETTER_AUTH_TEST_DB is set to a different provider")
+	if os.Getenv("AUTHULA_TEST_DB") != "" && os.Getenv("AUTHULA_TEST_DB") != "sqlite" {
+		t.Skip("skipping SQLite test when AUTHULA_TEST_DB is set to a different provider")
 	}
 
 	logger := watermill.NewStdLogger(false, false)
@@ -241,8 +241,8 @@ func TestInitWatermillProvider_SQLite_DefaultPath(t *testing.T) {
 }
 
 func TestInitWatermillProvider_SQLite_EmptyPath(t *testing.T) {
-	if os.Getenv("GO_BETTER_AUTH_TEST_DB") != "" && os.Getenv("GO_BETTER_AUTH_TEST_DB") != "sqlite" {
-		t.Skip("skipping SQLite test when GO_BETTER_AUTH_TEST_DB is set to a different provider")
+	if os.Getenv("AUTHULA_TEST_DB") != "" && os.Getenv("AUTHULA_TEST_DB") != "sqlite" {
+		t.Skip("skipping SQLite test when AUTHULA_TEST_DB is set to a different provider")
 	}
 
 	logger := watermill.NewStdLogger(false, false)
@@ -279,8 +279,8 @@ func TestInitWatermillProvider_SQLite_EmptyPath(t *testing.T) {
 }
 
 func TestInitWatermillProvider_SQLite_CustomPath(t *testing.T) {
-	if os.Getenv("GO_BETTER_AUTH_TEST_DB") != "" && os.Getenv("GO_BETTER_AUTH_TEST_DB") != "sqlite" {
-		t.Skip("skipping SQLite test when GO_BETTER_AUTH_TEST_DB is set to a different provider")
+	if os.Getenv("AUTHULA_TEST_DB") != "" && os.Getenv("AUTHULA_TEST_DB") != "sqlite" {
+		t.Skip("skipping SQLite test when AUTHULA_TEST_DB is set to a different provider")
 	}
 
 	logger := watermill.NewStdLogger(false, false)

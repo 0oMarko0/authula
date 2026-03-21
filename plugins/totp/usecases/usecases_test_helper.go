@@ -7,11 +7,11 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	internaltests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/services"
-	totptests "github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
+	internaltests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/totp/services"
+	totptests "github.com/Authula/authula/plugins/totp/tests"
+	"github.com/Authula/authula/plugins/totp/types"
 )
 
 type testFixture struct {

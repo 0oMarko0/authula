@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/constants"
-	admintests "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/tests"
-	admintypes "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/admin/constants"
+	admintests "github.com/Authula/authula/plugins/admin/tests"
+	admintypes "github.com/Authula/authula/plugins/admin/types"
 )
 
 func TestAccountsUseCase_Create_Validation(t *testing.T) {

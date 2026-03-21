@@ -5,8 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
 )
 
 func TestFlushPreservesCookies(t *testing.T) {

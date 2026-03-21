@@ -3,8 +3,8 @@ package magiclink
 import (
 	"context"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/magic-link/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/magic-link/usecases"
+	"github.com/Authula/authula/plugins/magic-link/types"
+	"github.com/Authula/authula/plugins/magic-link/usecases"
 )
 
 type API struct {

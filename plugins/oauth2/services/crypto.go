@@ -14,7 +14,7 @@ import (
 // DeriveOAuthHMACKey derives an HMAC key from the app secret for OAuth2 operations
 func DeriveOAuthHMACKey(appSecret string) []byte {
 	mac := hmac.New(sha256.New, []byte(appSecret))
-	mac.Write([]byte("gobetterauth:oauth2:v1"))
+	mac.Write([]byte("authula:oauth2:v1"))
 	return mac.Sum(nil)
 }
 

@@ -9,9 +9,9 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
+	"github.com/Authula/authula/plugins/admin/repositories"
+	"github.com/Authula/authula/plugins/admin/tests"
+	"github.com/Authula/authula/plugins/admin/types"
 )
 
 func setupRepo(t *testing.T) (*repositories.BunUserStateRepository, func()) {

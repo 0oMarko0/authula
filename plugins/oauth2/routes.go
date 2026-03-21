@@ -1,8 +1,8 @@
 package oauth2
 
 import (
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/oauth2/handlers"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/oauth2/handlers"
 )
 
 func Routes(plugin *OAuth2Plugin) []models.Route {

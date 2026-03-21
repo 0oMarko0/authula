@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	migrationsmodule "github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	migrationsmodule "github.com/Authula/authula/migrations"
+	"github.com/Authula/authula/models"
 )
 
 // PluginSelector determines whether a plugin should participate in a migration operation.

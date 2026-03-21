@@ -1,5 +1,5 @@
 package constants
 
 const (
-	EnvAdminApiKey = "GO_BETTER_AUTH_ADMIN_API_KEY"
+	EnvAdminApiKey = "AUTHULA_ADMIN_API_KEY"
 )

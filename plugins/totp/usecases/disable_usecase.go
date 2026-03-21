@@ -3,8 +3,8 @@ package usecases
 import (
 	"context"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/constants"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/totp/constants"
 )
 
 type DisableUseCase struct {

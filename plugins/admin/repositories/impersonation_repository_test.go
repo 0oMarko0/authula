@@ -7,10 +7,10 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
+	"github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/admin/repositories"
+	"github.com/Authula/authula/plugins/admin/types"
 )
 
 func setupImpersonationRepo(t *testing.T) (*repositories.BunImpersonationRepository, *bun.DB, func()) {

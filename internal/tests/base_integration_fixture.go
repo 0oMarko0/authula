@@ -8,14 +8,14 @@ import (
 	"github.com/google/uuid"
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/config"
-	"github.com/GoBetterAuth/go-better-auth/v2/events"
-	coreplugins "github.com/GoBetterAuth/go-better-auth/v2/internal/plugins"
-	coreinternalrepos "github.com/GoBetterAuth/go-better-auth/v2/internal/repositories"
-	coreinternalsecurity "github.com/GoBetterAuth/go-better-auth/v2/internal/security"
-	coreinternalservices "github.com/GoBetterAuth/go-better-auth/v2/internal/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	coreservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/config"
+	"github.com/Authula/authula/events"
+	coreplugins "github.com/Authula/authula/internal/plugins"
+	coreinternalrepos "github.com/Authula/authula/internal/repositories"
+	coreinternalsecurity "github.com/Authula/authula/internal/security"
+	coreinternalservices "github.com/Authula/authula/internal/services"
+	"github.com/Authula/authula/models"
+	coreservices "github.com/Authula/authula/services"
 )
 
 type BaseTestFixture struct {

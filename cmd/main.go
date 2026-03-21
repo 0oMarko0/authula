@@ -12,11 +12,11 @@ import (
 
 	"github.com/joho/godotenv"
 
-	gobetterauth "github.com/GoBetterAuth/go-better-auth/v2"
-	"github.com/GoBetterAuth/go-better-auth/v2/cmd/shared/configloader"
-	gobetterauthenv "github.com/GoBetterAuth/go-better-auth/v2/env"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/bootstrap"
-	gobetterauthmodels "github.com/GoBetterAuth/go-better-auth/v2/models"
+	authula "github.com/Authula/authula"
+	"github.com/Authula/authula/cmd/shared/configloader"
+	authulaenv "github.com/Authula/authula/env"
+	"github.com/Authula/authula/internal/bootstrap"
+	authulamodels "github.com/Authula/authula/models"
 )
 
 func getEnv(key, fallback string) string {
@@ -26,7 +26,7 @@ func getEnv(key, fallback string) string {
 	return fallback
 }
 
-// Run GoBetterAuth with plugins built from config file
+// Run Authula with plugins built from config file
 // This demonstrates the unified architecture where both library and standalone modes
 // use identical runtime behavior - they only differ in how plugins are instantiated
 func main() {
@@ -41,7 +41,7 @@ func main() {
 
 	pluginsList := bootstrap.BuildPluginsFromConfig(config)
 
-	auth := gobetterauth.New(&gobetterauth.AuthConfig{
+	auth := authula.New(&authula.AuthConfig{
 		Config:  config,
 		Plugins: pluginsList,
 	})
@@ -59,8 +59,8 @@ func main() {
 }
 
 // runServer starts the HTTP server and handles restarts
-func runServer(logger gobetterauthmodels.Logger, auth *gobetterauth.Auth, restartChan chan struct{}, shutdownChan chan os.Signal) {
-	port := getEnv(gobetterauthenv.EnvPort, "8080")
+func runServer(logger authulamodels.Logger, auth *authula.Auth, restartChan chan struct{}, shutdownChan chan os.Signal) {
+	port := getEnv(authulaenv.EnvPort, "8080")
 
 	// Create HTTP server with graceful shutdown support
 	server := &http.Server{
@@ -71,7 +71,7 @@ func runServer(logger gobetterauthmodels.Logger, auth *gobetterauth.Auth, restar
 	// Start server in a goroutine
 	serverErrors := make(chan error, 1)
 	go func() {
-		logger.Info("Starting GoBetterAuth standalone server", "port", port)
+		logger.Info("Starting Authula standalone server", "port", port)
 		serverErrors <- server.ListenAndServe()
 	}()
 
@@ -116,8 +116,8 @@ func runServer(logger gobetterauthmodels.Logger, auth *gobetterauth.Auth, restar
 }
 
 // loadConfig loads configuration with proper precedence:
-func loadConfig() *gobetterauthmodels.Config {
-	configPath := getEnv(gobetterauthenv.EnvConfigPath, "config.toml")
+func loadConfig() *authulamodels.Config {
+	configPath := getEnv(authulaenv.EnvConfigPath, "config.toml")
 
 	config, exists, err := configloader.Load(configPath)
 	if err != nil {

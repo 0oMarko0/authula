@@ -9,11 +9,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/constants"
-	admintests "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/tests"
-	admintypes "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
+	internaltests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/admin/constants"
+	admintests "github.com/Authula/authula/plugins/admin/tests"
+	admintypes "github.com/Authula/authula/plugins/admin/types"
 )
 
 func TestImpersonationUseCase_GetAllImpersonations(t *testing.T) {

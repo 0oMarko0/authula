@@ -16,10 +16,10 @@ type CSRFPluginConfig struct {
 
 func (config *CSRFPluginConfig) ApplyDefaults() {
 	if config.CookieName == "" {
-		config.CookieName = "gobetterauth_csrf_token"
+		config.CookieName = "authula_csrf_token"
 	}
 	if config.HeaderName == "" {
-		config.HeaderName = "X-GOBETTERAUTH-CSRF-TOKEN"
+		config.HeaderName = "X-AUTHULA-CSRF-TOKEN"
 	}
 	if config.MaxAge == 0 {
 		config.MaxAge = 24 * time.Hour

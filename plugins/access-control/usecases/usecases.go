@@ -3,7 +3,7 @@ package usecases
 import (
 	"context"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/types"
+	"github.com/Authula/authula/plugins/access-control/types"
 )
 
 type UseCases struct {

@@ -3,9 +3,9 @@ package admin
 import (
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	adminhandlers "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/handlers"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/usecases"
+	"github.com/Authula/authula/models"
+	adminhandlers "github.com/Authula/authula/plugins/admin/handlers"
+	"github.com/Authula/authula/plugins/admin/usecases"
 )
 
 type routeUseCases struct {

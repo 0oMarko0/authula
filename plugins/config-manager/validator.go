@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
 )
 
 // ValidateAndMergeConfig converts a config to a map, merges a key-value pair,

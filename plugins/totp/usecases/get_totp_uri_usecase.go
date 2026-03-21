@@ -3,10 +3,10 @@ package usecases
 import (
 	"context"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/plugins/totp/constants"
+	"github.com/Authula/authula/plugins/totp/services"
+	"github.com/Authula/authula/plugins/totp/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type GetTOTPURIUseCase struct {

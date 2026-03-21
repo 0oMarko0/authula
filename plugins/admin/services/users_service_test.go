@@ -8,11 +8,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	adminconstants "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/constants"
-	adminservices "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/services"
-	admintypes "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
+	internaltests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/models"
+	adminconstants "github.com/Authula/authula/plugins/admin/constants"
+	adminservices "github.com/Authula/authula/plugins/admin/services"
+	admintypes "github.com/Authula/authula/plugins/admin/types"
 )
 
 func newUsersServiceFixture() (*adminservices.UsersService, *internaltests.MockUserRepository) {

@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/repositories"
+	"github.com/Authula/authula/services"
 )
 
 // TokenServiceImpl implements TokenService

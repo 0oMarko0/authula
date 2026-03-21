@@ -3,9 +3,9 @@ package accesscontrol
 import (
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/handlers"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/usecases"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/access-control/handlers"
+	"github.com/Authula/authula/plugins/access-control/usecases"
 )
 
 type routeUseCases struct {

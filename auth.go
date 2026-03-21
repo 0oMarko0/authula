@@ -1,4 +1,4 @@
-package gobetterauth
+package authula
 
 import (
 	"context"
@@ -8,13 +8,13 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/migrationmanager"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/plugins"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	coreservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal"
+	"github.com/Authula/authula/internal/migrationmanager"
+	"github.com/Authula/authula/internal/plugins"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/migrations"
+	"github.com/Authula/authula/models"
+	coreservices "github.com/Authula/authula/services"
 )
 
 type AuthConfig struct {

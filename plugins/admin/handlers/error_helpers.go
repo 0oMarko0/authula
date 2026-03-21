@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/constants"
+	"github.com/Authula/authula/plugins/admin/constants"
 )
 
 func mapAdminHttpErrorStatus(err error) int {

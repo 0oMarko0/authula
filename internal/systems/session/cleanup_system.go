@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/services"
 )
 
 type SessionCleanupSystem struct {

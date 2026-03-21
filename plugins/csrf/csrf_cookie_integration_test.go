@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/router"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/router"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type mockServiceRegistry struct {

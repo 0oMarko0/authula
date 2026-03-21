@@ -8,7 +8,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/types"
+	"github.com/Authula/authula/plugins/jwt/types"
 )
 
 // JWKSRepository provides data access for JWKS (JSON Web Key Set) records

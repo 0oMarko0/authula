@@ -1,22 +1,22 @@
 <p align="center">
-  <img src="./project-logo.png" height="150" width="150" alt="GoBetterAuth Logo"/>
+  <img src="./project-logo.png" height="100" width="250" alt="Authula Logo"/>
 </p>
 
 <div align="center">
-  <a href="https://www.npmjs.com/package/go-better-auth" target="_parent">
-    <img src="https://img.shields.io/npm/dm/go-better-auth.svg" alt="Node.js SDK downloads" />
+  <a href="https://www.npmjs.com/package/authula" target="_parent">
+    <img src="https://img.shields.io/npm/dm/authula.svg" alt="Node.js SDK downloads" />
   </a>
-  <a href="https://github.com/GoBetterAuth/go-better-auth/stargazers" target="_parent">
-    <img src="https://img.shields.io/github/stars/GoBetterAuth/go-better-auth.svg?style=social&label=Star" alt="GitHub stars" />
+  <a href="https://github.com/Authula/authula/stargazers" target="_parent">
+    <img src="https://img.shields.io/github/stars/Authula/authula.svg?style=social&label=Star" alt="GitHub stars" />
   </a>
-  <a href="https://goreportcard.com/report/github.com/GoBetterAuth/go-better-auth" target="_parent">
-    <img src="https://goreportcard.com/badge/github.com/GoBetterAuth/go-better-auth" alt="Go Report Card" />
+  <a href="https://goreportcard.com/report/github.com/Authula/authula" target="_parent">
+    <img src="https://goreportcard.com/badge/github.com/Authula/authula" alt="Go Report Card" />
   </a>
-  <a href="https://pkg.go.dev/github.com/GoBetterAuth/go-better-auth/v2" target="_parent">
-    <img src="https://pkg.go.dev/badge/github.com/GoBetterAuth/go-better-auth/v2.svg" alt="Go Reference" />
+  <a href="https://pkg.go.dev/github.com/Authula/authula" target="_parent">
+    <img src="https://pkg.go.dev/badge/github.com/Authula/authula.svg" alt="Go Reference" />
   </a>
-  <a href="https://github.com/GoBetterAuth/go-better-auth/blob/main/LICENSE" target="_parent">
-    <img src="https://img.shields.io/github/license/GoBetterAuth/go-better-auth.svg" alt="License" />
+  <a href="https://github.com/Authula/authula/blob/main/LICENSE" target="_parent">
+    <img src="https://img.shields.io/github/license/Authula/authula.svg" alt="License" />
   </a>
 </div>
 
@@ -32,15 +32,15 @@
 
 ✨ Overview
 
-**GoBetterAuth** is an open-source authentication solution that scales with you. Embed it as a library in your Go app, or run it as a standalone auth server with any tech stack. It simplifies adding robust authentication to backend services, empowering developers to build secure applications faster.
+**Authula** is an open-source authentication solution that scales with you. Embed it as a library in your Go app, or run it as a standalone auth server with any tech stack. It simplifies adding robust authentication to backend services, empowering developers to build secure applications faster.
 
-All functionality is delivered through a powerful plugin system, allowing you to compose exactly the authentication stack you need — no more, no less, all built with clean architecture. **GoBetterAuth** is flexible enough to integrate with any technology stack. It streamlines the implementation of essential security features through a clean, modular architecture, allowing developers to concentrate on building their applications without the overhead of managing authentication complexities.
+All functionality is delivered through a powerful plugin system, allowing you to compose exactly the authentication stack you need — no more, no less, all built with clean architecture. **Authula** is flexible enough to integrate with any technology stack. It streamlines the implementation of essential security features through a clean, modular architecture, allowing developers to concentrate on building their applications without the overhead of managing authentication complexities.
 
 ---
 
 ### 🎯 Who is it for?
 
-GoBetterAuth is ideal for:
+Authula is ideal for:
 
 - Startups that want full control over their authentication stack
 - Teams building microservices or multi-backend systems
@@ -52,7 +52,7 @@ GoBetterAuth is ideal for:
 
 🧩 Plugins & Capabilities
 
-GoBetterAuth is architected around a powerful plugin and capability system.
+Authula is architected around a powerful plugin and capability system.
 
 **Plugins** are modular packages that encapsulate related authentication features.  
 **Capabilities** represent individual, fine-grained functionalities exposed by these plugins.
@@ -70,7 +70,7 @@ This design empowers you to build secure, maintainable, and highly customizable 
 
 ### Features
 
-GoBetterAuth comes with a variety of plugins that provide essential authentication features out of the box:
+Authula comes with a variety of plugins that provide essential authentication features out of the box:
 
 - 📧 Email & Password: Authentication, Email Verification & Password Reset
 - 🌐 OAuth providers
@@ -87,7 +87,7 @@ GoBetterAuth comes with a variety of plugins that provide essential authenticati
 
 ### Hooks System
 
-GoBetterAuth includes a powerful, lifecycle-based hooks system that lets you intercept and customize request handling at every stage of the HTTP pipeline.
+Authula includes a powerful, lifecycle-based hooks system that lets you intercept and customize request handling at every stage of the HTTP pipeline.
 
 Hooks allow you to implement:
 
@@ -118,28 +118,29 @@ Build your own plugins for:
 
 `Embedded Mode (Go Library)`
 
-Embed GoBetterAuth directly into your Go application:
+Embed Authula directly into your Go application:
 
 ```go
 import (
-  gobetterauth "github.com/GoBetterAuth/go-better-auth/v2"
-  gobetterauthconfig "github.com/GoBetterAuth/go-better-auth/v2/config"
-  gobetterauthmodels "github.com/GoBetterAuth/go-better-auth/v2/models"
+  authula "github.com/Authula/authula"
+  authulaconfig "github.com/Authula/authula/config"
+  authulamodels "github.com/Authula/authula/models"
+  authulaenv "github.com/Authula/authula/env"
 )
 
-config := gobetterauthconfig.NewConfig(
-  gobetterauthconfig.WithAppName("GoBetterAuthPlayground"),
-  gobetterauthconfig.WithBasePath("/api/auth"),
-  gobetterauthconfig.WithDatabase(gobetterauthmodels.DatabaseConfig{
+config := authulaconfig.NewConfig(
+  authulaconfig.WithAppName("AuthulaPlayground"),
+  authulaconfig.WithBasePath("/api/auth"),
+  authulaconfig.WithDatabase(authulamodels.DatabaseConfig{
     Provider: "postgres",
-    URL:      os.Getenv(gobetterauthenv.EnvDatabaseURL),
+    URL:      os.Getenv(authulaenv.EnvDatabaseURL),
   }),
   // other config options...
 )
 
-auth := gobetterauth.New(gobetterauth.AuthConfig{
+auth := authula.New(authula.AuthConfig{
   Config:  config,
-  Plugins: []gobetterauthmodels.Plugin{
+  Plugins: []authulamodels.Plugin{
     emailpasswordplugin.New(...),
     // other plugins...
   },
@@ -159,16 +160,16 @@ You get:
 
 `Standalone Mode`
 
-Run GoBetterAuth as a standalone authentication server via Docker:
+Run Authula as a standalone authentication server via Docker:
 
 ```bash
 docker run -itd -p 8080:8080 \
   -v $(pwd)/config.toml:/home/appuser/config.toml \
-  -e GO_BETTER_AUTH_BASE_URL=http://localhost:8080 \
-  -e GO_BETTER_AUTH_SECRET=my-app-secret \
-  -e GO_BETTER_AUTH_DATABASE_URL=<your_connection_string> \
+  -e AUTHULA_BASE_URL=http://localhost:8080 \
+  -e AUTHULA_SECRET=my-app-secret \
+  -e AUTHULA_DATABASE_URL=<your_connection_string> \
   # other env vars depending on plugins used...
-  ghcr.io/gobetterauth/go-better-auth:latest
+  ghcr.io/authula/authula:latest
 ```
 
 Use it from any language or framework over HTTP.
@@ -190,15 +191,15 @@ Use it from any language or framework over HTTP.
 
 ### Docs
 
-For more info and a full guide on how to use this library, check out the [Docs](https://go-better-auth.vercel.app/docs).
+For more info and a full guide on how to use this library, check out the [Docs](https://authula.vercel.app/docs).
 
 ---
 
 ### SDKs
 
-We provide the following SDKs to facilitate easy integration with GoBetterAuth:
+We provide the following SDKs to facilitate easy integration with Authula:
 
-- [Node.js SDK](https://github.com/GoBetterAuth/go-better-auth-node-sdk)
+- [Node.js SDK](https://github.com/Authula/authula-node-sdk)
 
 ---
 
@@ -206,11 +207,11 @@ We provide the following SDKs to facilitate easy integration with GoBetterAuth:
 
 Your contributions are welcome! Here's how you can get involved:
 
-- If you find a bug, please [submit an issue](https://github.com/GoBetterAuth/go-better-auth/issues).
+- If you find a bug, please [submit an issue](https://github.com/Authula/authula/issues).
 - Set up your development environment by following our [Contribution Guide](./.github/CONTRIBUTING.md).
-- Contribute code by making a [pull request](https://github.com/GoBetterAuth/go-better-auth/) to enhance features, improve user experience, or fix issues.
+- Contribute code by making a [pull request](https://github.com/Authula/authula/) to enhance features, improve user experience, or fix issues.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=GoBetterAuth/go-better-auth&type=date&legend=top-left)](https://www.star-history.com/#GoBetterAuth/go-better-auth&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=Authula/authula&type=date&legend=top-left)](https://www.star-history.com/#Authula/authula&type=date&legend=top-left)
 
 ---
 

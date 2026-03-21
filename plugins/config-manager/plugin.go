@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/config-manager/handlers"
-	configmanagerservices "github.com/GoBetterAuth/go-better-auth/v2/plugins/config-manager/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/config-manager/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/migrations"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/config-manager/handlers"
+	configmanagerservices "github.com/Authula/authula/plugins/config-manager/services"
+	"github.com/Authula/authula/plugins/config-manager/types"
+	"github.com/Authula/authula/services"
 )
 
 type ConfigManagerPlugin struct {

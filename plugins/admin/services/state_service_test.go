@@ -9,10 +9,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/constants"
-	adminservices "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/services"
-	admintests "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/tests"
-	admintypes "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
+	"github.com/Authula/authula/plugins/admin/constants"
+	adminservices "github.com/Authula/authula/plugins/admin/services"
+	admintests "github.com/Authula/authula/plugins/admin/tests"
+	admintypes "github.com/Authula/authula/plugins/admin/types"
 )
 
 func newStateServiceFixture() (*adminservices.StateService, *admintests.MockUserStateRepository, *admintests.MockSessionStateRepository, *admintests.MockImpersonationRepository) {

@@ -10,13 +10,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	internaltests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/services"
-	totptests "github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/usecases"
+	internaltests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/totp/constants"
+	"github.com/Authula/authula/plugins/totp/services"
+	totptests "github.com/Authula/authula/plugins/totp/tests"
+	"github.com/Authula/authula/plugins/totp/types"
+	"github.com/Authula/authula/plugins/totp/usecases"
 )
 
 type GetTOTPURIHandlerSuite struct {

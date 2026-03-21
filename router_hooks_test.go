@@ -1,4 +1,4 @@
-package gobetterauth
+package authula
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"testing/synctest"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 )
 
 // TestRouterHooksExecution verifies that hooks are executed at the correct stages

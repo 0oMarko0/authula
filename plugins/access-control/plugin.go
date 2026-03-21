@@ -1,13 +1,13 @@
 package accesscontrol
 
 import (
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/usecases"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/migrations"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/access-control/repositories"
+	"github.com/Authula/authula/plugins/access-control/services"
+	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/Authula/authula/plugins/access-control/usecases"
 )
 
 type AccessControlPlugin struct {

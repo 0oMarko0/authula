@@ -6,12 +6,12 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/env"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/oauth2/services"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/oauth2/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/env"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/oauth2/services"
+	"github.com/Authula/authula/plugins/oauth2/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type OAuth2Plugin struct {

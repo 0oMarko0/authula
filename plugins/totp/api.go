@@ -1,7 +1,7 @@
 package totp
 
 import (
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/usecases"
+	"github.com/Authula/authula/plugins/totp/usecases"
 )
 
 type API struct {

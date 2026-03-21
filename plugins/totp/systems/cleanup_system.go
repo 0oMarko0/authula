@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/totp/types"
 )
 
 // TrustedDeviceRepository is the subset of the TOTP repository required by the cleanup system.

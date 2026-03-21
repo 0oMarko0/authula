@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/magic-link/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/magic-link/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type ExchangeUseCaseImpl struct {

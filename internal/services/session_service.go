@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/security"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/repositories"
+	"github.com/Authula/authula/internal/security"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/services"
 )
 
 type sessionService struct {

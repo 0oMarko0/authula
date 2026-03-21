@@ -1,4 +1,4 @@
-// Package main demonstrates mounting go-better-auth in a Fiber application
+// Package main demonstrates mounting Authula in a Fiber application
 // using the Fiber adapter.
 package main
 
@@ -9,23 +9,23 @@ import (
 	"github.com/gofiber/fiber/v3"
 	"github.com/gofiber/fiber/v3/middleware/logger"
 
-	gobetterauth "github.com/GoBetterAuth/go-better-auth/v2"
-	"github.com/GoBetterAuth/go-better-auth/v2/config"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	authula "github.com/Authula/authula"
+	"github.com/Authula/authula/config"
+	"github.com/Authula/authula/models"
 
-	fiberadapter "github.com/GoBetterAuth/go-better-auth/v2/adapters/fiber"
+	fiberadapter "github.com/Authula/authula/adapters/fiber"
 
-	emailpasswordplugin "github.com/GoBetterAuth/go-better-auth/v2/plugins/email-password"
-	emailpasswordplugintypes "github.com/GoBetterAuth/go-better-auth/v2/plugins/email-password/types"
+	emailpasswordplugin "github.com/Authula/authula/plugins/email-password"
+	emailpasswordplugintypes "github.com/Authula/authula/plugins/email-password/types"
 
-	emailplugin "github.com/GoBetterAuth/go-better-auth/v2/plugins/email"
-	emailplugintypes "github.com/GoBetterAuth/go-better-auth/v2/plugins/email/types"
+	emailplugin "github.com/Authula/authula/plugins/email"
+	emailplugintypes "github.com/Authula/authula/plugins/email/types"
 
-	sessionplugin "github.com/GoBetterAuth/go-better-auth/v2/plugins/session"
+	sessionplugin "github.com/Authula/authula/plugins/session"
 )
 
 func main() {
-	// Configure go-better-auth.
+	// Configure authula.
 	authCfg := config.NewConfig(
 		config.WithAppName("Fiber Example"),
 		config.WithBaseURL("http://localhost:3000"),
@@ -36,7 +36,7 @@ func main() {
 			URL:      "postgresql://user:pass@localhost:5432/mydb",
 		}),
 		config.WithSession(models.SessionConfig{
-			CookieName: "gobetterauth.session_token",
+			CookieName: "authula.session_token",
 			ExpiresIn:  7 * 24 * time.Hour,
 			HttpOnly:   true,
 			SameSite:   "lax",
@@ -60,8 +60,8 @@ func main() {
 		}),
 	}
 
-	// Create go-better-auth instance.
-	auth := gobetterauth.New(&gobetterauth.AuthConfig{
+	// Create Authula instance.
+	auth := authula.New(&authula.AuthConfig{
 		Config:  authCfg,
 		Plugins: plugins,
 	})
@@ -70,7 +70,7 @@ func main() {
 	app := fiber.New()
 	app.Use(logger.New())
 
-	// Mount go-better-auth using the Fiber adapter.
+	// Mount using the Fiber adapter.
 	app.Use("/api/auth", fiberadapter.New(fiberadapter.Config{
 		Handler: auth.Handler(),
 	}))

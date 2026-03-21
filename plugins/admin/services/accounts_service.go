@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	corerepositories "github.com/GoBetterAuth/go-better-auth/v2/internal/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	adminconstants "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	corerepositories "github.com/Authula/authula/internal/repositories"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
+	adminconstants "github.com/Authula/authula/plugins/admin/constants"
+	"github.com/Authula/authula/plugins/admin/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type AccountsService struct {

@@ -6,9 +6,9 @@ import (
 	"html/template"
 	texttemplate "text/template"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	emailtypes "github.com/GoBetterAuth/go-better-auth/v2/plugins/email/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/models"
+	emailtypes "github.com/Authula/authula/plugins/email/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type EmailService struct {

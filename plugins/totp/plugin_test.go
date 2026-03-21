@@ -15,12 +15,12 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/repository"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
+	"github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/migrations"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/totp/constants"
+	"github.com/Authula/authula/plugins/totp/repository"
+	"github.com/Authula/authula/plugins/totp/types"
 )
 
 func buildTestPlugin(t *testing.T) (*TOTPPlugin, *tests.MockUserService, *tests.MockTokenService, *tests.MockVerificationService) {

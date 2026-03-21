@@ -1,4 +1,4 @@
-package gobetterauth
+package authula
 
 import (
 	"context"
@@ -14,9 +14,9 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/router"
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/internal/router"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
 )
 
 // HookErrorMode defines how the router handles errors from hook handlers

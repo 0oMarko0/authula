@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/config-manager/constants"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/plugins/config-manager/constants"
 )
 
 func ConfigManagerAuthMiddleware(next http.Handler) http.Handler {

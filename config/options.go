@@ -6,12 +6,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/env"
-	"github.com/GoBetterAuth/go-better-auth/v2/events"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/env"
+	"github.com/Authula/authula/events"
+	"github.com/Authula/authula/models"
 )
 
-const defaultSecret = "go-better-auth-secret-0123456789"
+const defaultSecret = "authula-secret-0123456789"
 
 type ConfigOption func(*models.Config)
 
@@ -20,12 +20,12 @@ type ConfigOption func(*models.Config)
 func NewConfig(options ...ConfigOption) *models.Config {
 	// Define sensible defaults first
 	config := &models.Config{
-		AppName:  "GoBetterAuth",
+		AppName:  "Authula",
 		BaseURL:  "http://localhost:8080",
 		BasePath: "/auth",
 		Secret:   defaultSecret,
 		Session: models.SessionConfig{
-			CookieName:         "gobetterauth.session_token",
+			CookieName:         "authula.session_token",
 			ExpiresIn:          time.Hour * 24 * 7, // 7 days by default
 			UpdateAge:          time.Hour * 24,     // 24 hours update interval
 			Secure:             false,

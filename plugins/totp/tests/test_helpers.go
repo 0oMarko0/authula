@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
+	internaltests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/plugins/totp/types"
 )
 
 type MockTOTPRepo struct {

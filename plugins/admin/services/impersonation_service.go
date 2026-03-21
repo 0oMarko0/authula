@@ -5,11 +5,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	adminconstants "github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/util"
+	adminconstants "github.com/Authula/authula/plugins/admin/constants"
+	"github.com/Authula/authula/plugins/admin/repositories"
+	"github.com/Authula/authula/plugins/admin/types"
+	rootservices "github.com/Authula/authula/services"
 )
 
 type ImpersonationService struct {

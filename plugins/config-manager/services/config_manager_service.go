@@ -5,9 +5,9 @@ import (
 	"maps"
 	"sync"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/config-manager/constants"
-	"github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/config-manager/constants"
+	"github.com/Authula/authula/services"
 )
 
 // ConfigManagerService implements the ConfigManagerAPI interface.

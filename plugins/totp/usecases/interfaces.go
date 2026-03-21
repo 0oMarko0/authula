@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/totp/types"
+	"github.com/Authula/authula/plugins/totp/types"
 )
 
 type UseCases struct {

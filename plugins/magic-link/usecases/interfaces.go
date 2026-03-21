@@ -3,7 +3,7 @@ package usecases
 import (
 	"context"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/magic-link/types"
+	"github.com/Authula/authula/plugins/magic-link/types"
 )
 
 type SignInUseCase interface {

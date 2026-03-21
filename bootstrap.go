@@ -1,19 +1,19 @@
-package gobetterauth
+package authula
 
 import (
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/events"
-	internalbootstrap "github.com/GoBetterAuth/go-better-auth/v2/internal/bootstrap"
-	internalevents "github.com/GoBetterAuth/go-better-auth/v2/internal/events"
-	internalrepositories "github.com/GoBetterAuth/go-better-auth/v2/internal/repositories"
-	internalsecurity "github.com/GoBetterAuth/go-better-auth/v2/internal/security"
-	internalservices "github.com/GoBetterAuth/go-better-auth/v2/internal/services"
-	internalsystemssession "github.com/GoBetterAuth/go-better-auth/v2/internal/systems/session"
-	internalsystemsverification "github.com/GoBetterAuth/go-better-auth/v2/internal/systems/verification"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	coreservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/events"
+	internalbootstrap "github.com/Authula/authula/internal/bootstrap"
+	internalevents "github.com/Authula/authula/internal/events"
+	internalrepositories "github.com/Authula/authula/internal/repositories"
+	internalsecurity "github.com/Authula/authula/internal/security"
+	internalservices "github.com/Authula/authula/internal/services"
+	internalsystemssession "github.com/Authula/authula/internal/systems/session"
+	internalsystemsverification "github.com/Authula/authula/internal/systems/verification"
+	"github.com/Authula/authula/models"
+	coreservices "github.com/Authula/authula/services"
 )
 
 // InitLogger initializes the logger based on configuration

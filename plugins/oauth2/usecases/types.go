@@ -1,7 +1,7 @@
 package usecases
 
 import (
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 )
 
 // AuthorizeResult contains the result of an authorization request

@@ -3,9 +3,9 @@ package jwt
 import (
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/handlers"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/usecases"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/jwt/handlers"
+	"github.com/Authula/authula/plugins/jwt/usecases"
 )
 
 func Routes(plugin *JWTPlugin) []models.Route {

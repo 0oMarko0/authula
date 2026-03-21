@@ -3,9 +3,9 @@ package usecases
 import (
 	"context"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/services"
+	"github.com/Authula/authula/internal/types"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/services"
 )
 
 type SignOutUseCase struct {

@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	internaltests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/types"
+	internaltests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/plugins/access-control/types"
 )
 
 func TestBunRolePermissionRepositoryRoleCRUDAndAssignmentCount(t *testing.T) {

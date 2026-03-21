@@ -3,10 +3,10 @@ package admin
 import (
 	"context"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/admin/usecases"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/admin/repositories"
+	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/Authula/authula/plugins/admin/usecases"
 )
 
 type API struct {

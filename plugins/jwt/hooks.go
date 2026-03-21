@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/jwt/types"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/jwt/types"
 )
 
 type JWTHookID string

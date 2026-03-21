@@ -3,9 +3,9 @@ package accesscontrol
 import (
 	"context"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/access-control/usecases"
+	"github.com/Authula/authula/plugins/access-control/repositories"
+	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/Authula/authula/plugins/access-control/usecases"
 )
 
 type API struct {

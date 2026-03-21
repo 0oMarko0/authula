@@ -5,7 +5,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
+	"github.com/Authula/authula/migrations"
 )
 
 func configManagerMigrationsForProvider(provider string) []migrations.Migration {

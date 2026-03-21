@@ -5,10 +5,10 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/email-password/handlers"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/email-password/types"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/email-password/usecases"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/email-password/handlers"
+	"github.com/Authula/authula/plugins/email-password/types"
+	"github.com/Authula/authula/plugins/email-password/usecases"
 )
 
 type API struct {

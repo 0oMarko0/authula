@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/env"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/env"
+	"github.com/Authula/authula/models"
 	"github.com/lmittmann/tint"
 )
 

@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/repositories"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/internal/repositories"
+	"github.com/Authula/authula/models"
 	"github.com/uptrace/bun"
 )
 

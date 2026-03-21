@@ -1,4 +1,4 @@
-package gobetterauth
+package authula
 
 import (
 	"net/http"
@@ -6,8 +6,8 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/internal/util"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/internal/util"
+	"github.com/Authula/authula/models"
 )
 
 // TestRouteMetadataPopulation verifies that route metadata is properly assigned to RequestContext

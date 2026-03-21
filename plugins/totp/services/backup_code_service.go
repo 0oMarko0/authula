@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	rootservices "github.com/GoBetterAuth/go-better-auth/v2/services"
+	rootservices "github.com/Authula/authula/services"
 )
 
 const backupCodeLength = 12

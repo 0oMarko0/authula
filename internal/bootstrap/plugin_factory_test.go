@@ -3,7 +3,7 @@ package bootstrap
 import (
 	"testing"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/models"
 )
 
 func assertPanic(t *testing.T, f func()) {

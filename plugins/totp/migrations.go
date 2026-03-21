@@ -5,8 +5,8 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/GoBetterAuth/go-better-auth/v2/migrations"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
+	"github.com/Authula/authula/migrations"
+	"github.com/Authula/authula/models"
 )
 
 // MigrationSet returns the TOTP plugin migrations as a migration set

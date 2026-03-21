@@ -3,9 +3,9 @@ package usecases
 import (
 	"time"
 
-	inttests "github.com/GoBetterAuth/go-better-auth/v2/internal/tests"
-	"github.com/GoBetterAuth/go-better-auth/v2/models"
-	"github.com/GoBetterAuth/go-better-auth/v2/plugins/magic-link/types"
+	inttests "github.com/Authula/authula/internal/tests"
+	"github.com/Authula/authula/models"
+	"github.com/Authula/authula/plugins/magic-link/types"
 )
 
 type mockUserService = inttests.MockUserService
@@ -51,7 +51,7 @@ func newSignInTestUseCase() (*SignInUseCaseImpl, *mockUserService, *mockAccountS
 		GlobalConfig: &models.Config{
 			BaseURL:  "http://localhost",
 			BasePath: "/auth",
-			AppName:  "GoBetterAuth",
+			AppName:  "TestApp",
 		},
 		PluginConfig: &types.MagicLinkPluginConfig{
 			ExpiresIn: 15 * time.Minute,
