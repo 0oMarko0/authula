@@ -3,9 +3,6 @@
 </p>
 
 <div align="center">
-  <a href="https://www.npmjs.com/package/authula" target="_parent">
-    <img src="https://img.shields.io/npm/dm/authula.svg" alt="Node.js SDK downloads" />
-  </a>
   <a href="https://github.com/Authula/authula/stargazers" target="_parent">
     <img src="https://img.shields.io/github/stars/Authula/authula.svg?style=social&label=Star" alt="GitHub stars" />
   </a>
