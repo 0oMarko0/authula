@@ -8,7 +8,7 @@ import (
 
 	"github.com/redis/go-redis/v9"
 
-	"github.com/Authula/authula/env"
+	"github.com/0oMarko0/authula/env"
 )
 
 // RedisSecondaryStorageOptions configures a Redis secondary storage instance

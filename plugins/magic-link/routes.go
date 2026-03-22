@@ -3,8 +3,8 @@ package magiclink
 import (
 	"net/http"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/magic-link/handlers"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/magic-link/handlers"
 )
 
 func Routes(p *MagicLinkPlugin) []models.Route {

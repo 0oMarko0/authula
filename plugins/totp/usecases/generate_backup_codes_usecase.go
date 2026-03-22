@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/Authula/authula/plugins/totp/constants"
-	"github.com/Authula/authula/plugins/totp/services"
+	"github.com/0oMarko0/authula/plugins/totp/constants"
+	"github.com/0oMarko0/authula/plugins/totp/services"
 )
 
 type GenerateBackupCodesUseCase struct {

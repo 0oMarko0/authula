@@ -18,7 +18,7 @@ you have concerns or encounter any unacceptable behavior, please reach out to mt
 
 ### Reporting bugs
 
-We rely on bug reports to enhance this project for all users. To assist us, we have a bug reporting template specifying the necessary details. Ensure you check our [existing bug reports](https://github.com/Authula/authula/issues?q=is%3Aissue+is%3Aopen+label%3Abug) prior to submitting a new one to avoid duplicates.
+We rely on bug reports to enhance this project for all users. To assist us, we have a bug reporting template specifying the necessary details. Ensure you check our [existing bug reports](https://github.com/0oMarko0/authula/issues?q=is%3Aissue+is%3Aopen+label%3Abug) prior to submitting a new one to avoid duplicates.
 
 ### Reporting security issues
 
@@ -28,7 +28,7 @@ Avoid creating a public GitHub issue for security concerns. If you discover a se
 
 To request new features, please create an issue on this project.
 To ensure that we can understand the problem you are looking to solve, please be as detailed as possible.
-To see what other people have already suggested, you can look [here](https://github.com/Authula/authula/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement).
+To see what other people have already suggested, you can look [here](https://github.com/0oMarko0/authula/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement).
 Please be aware that duplicate issues might already exist. If you are creating a new issue, please check existing open, or recently closed. Having a single vote for an issue is far easier for us to prioritise.
 
 ---

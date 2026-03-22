@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/Authula/authula/plugins/totp/types"
+	"github.com/0oMarko0/authula/plugins/totp/types"
 )
 
 type UseCases struct {

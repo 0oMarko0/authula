@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
 )
 
 // ValidateAndMergeConfig converts a config to a map, merges a key-value pair,

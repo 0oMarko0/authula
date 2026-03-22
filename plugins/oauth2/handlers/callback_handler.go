@@ -5,11 +5,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/oauth2/constants"
-	"github.com/Authula/authula/plugins/oauth2/services"
-	"github.com/Authula/authula/plugins/oauth2/types"
-	"github.com/Authula/authula/plugins/oauth2/usecases"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/oauth2/constants"
+	"github.com/0oMarko0/authula/plugins/oauth2/services"
+	"github.com/0oMarko0/authula/plugins/oauth2/types"
+	"github.com/0oMarko0/authula/plugins/oauth2/usecases"
 )
 
 type CallbackHandler struct {

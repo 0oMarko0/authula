@@ -5,8 +5,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/Authula/authula/plugins/access-control/constants"
-	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/0oMarko0/authula/plugins/access-control/constants"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
 )
 
 type stubUserAccessRepo struct {

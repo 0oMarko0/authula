@@ -7,10 +7,10 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	accesscontrolconstants "github.com/Authula/authula/plugins/access-control/constants"
-	"github.com/Authula/authula/plugins/access-control/tests"
-	"github.com/Authula/authula/plugins/access-control/types"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	accesscontrolconstants "github.com/0oMarko0/authula/plugins/access-control/constants"
+	"github.com/0oMarko0/authula/plugins/access-control/tests"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
 )
 
 func TestCreateRoleHandler(t *testing.T) {

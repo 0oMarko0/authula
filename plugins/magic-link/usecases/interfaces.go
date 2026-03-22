@@ -3,7 +3,7 @@ package usecases
 import (
 	"context"
 
-	"github.com/Authula/authula/plugins/magic-link/types"
+	"github.com/0oMarko0/authula/plugins/magic-link/types"
 )
 
 type SignInUseCase interface {

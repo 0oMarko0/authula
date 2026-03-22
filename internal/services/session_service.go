@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Authula/authula/internal/repositories"
-	"github.com/Authula/authula/internal/security"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal/repositories"
+	"github.com/0oMarko0/authula/internal/security"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/services"
 )
 
 type sessionService struct {

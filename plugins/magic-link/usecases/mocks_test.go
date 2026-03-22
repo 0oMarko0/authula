@@ -3,9 +3,9 @@ package usecases
 import (
 	"time"
 
-	inttests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/magic-link/types"
+	inttests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/magic-link/types"
 )
 
 type mockUserService = inttests.MockUserService

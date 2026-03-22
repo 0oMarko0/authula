@@ -1,4 +1,4 @@
-module github.com/Authula/authula
+module github.com/0oMarko0/authula
 
 go 1.26.1
 

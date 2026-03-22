@@ -9,10 +9,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/Authula/authula/plugins/admin/constants"
-	adminservices "github.com/Authula/authula/plugins/admin/services"
-	admintests "github.com/Authula/authula/plugins/admin/tests"
-	admintypes "github.com/Authula/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/plugins/admin/constants"
+	adminservices "github.com/0oMarko0/authula/plugins/admin/services"
+	admintests "github.com/0oMarko0/authula/plugins/admin/tests"
+	admintypes "github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 func newStateServiceFixture() (*adminservices.StateService, *admintests.MockUserStateRepository, *admintests.MockSessionStateRepository, *admintests.MockImpersonationRepository) {

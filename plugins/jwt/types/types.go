@@ -122,7 +122,7 @@ func (c *JWTPluginConfig) NormalizeAlgorithm() error {
 
 // JWKS represents a cryptographic key pair for signing and verification
 type JWKS struct {
-	bun.BaseModel `bun:"table:jwks"`
+	bun.BaseModel `bun:"table:authula_jwks"`
 
 	ID         string     `json:"id" bun:"column:id,pk"`
 	PublicKey  string     `json:"public_key" bun:"column:public_key"`
@@ -155,7 +155,7 @@ type TokenPair struct {
 
 // RefreshToken represents a stored refresh token in the database
 type RefreshToken struct {
-	bun.BaseModel `bun:"table:refresh_tokens"`
+	bun.BaseModel `bun:"table:authula_refresh_tokens"`
 
 	ID               string     `json:"id" bun:"column:id,pk"`
 	SessionID        string     `json:"session_id" bun:"column:session_id"`

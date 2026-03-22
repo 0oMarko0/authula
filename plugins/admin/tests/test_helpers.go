@@ -7,11 +7,11 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/models"
-	adminservices "github.com/Authula/authula/plugins/admin/services"
-	"github.com/Authula/authula/plugins/admin/types"
-	"github.com/Authula/authula/plugins/admin/usecases"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/models"
+	adminservices "github.com/0oMarko0/authula/plugins/admin/services"
+	"github.com/0oMarko0/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/plugins/admin/usecases"
 )
 
 func PtrString(t *testing.T, s string) *string {

@@ -14,9 +14,9 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"github.com/Authula/authula/internal/router"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/internal/router"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
 )
 
 // HookErrorMode defines how the router handles errors from hook handlers

@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/Authula/authula/env"
+	"github.com/0oMarko0/authula/env"
 )
 
 type RateLimitPluginConfig struct {

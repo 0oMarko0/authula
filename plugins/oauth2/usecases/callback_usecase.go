@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/oauth2/services"
-	"github.com/Authula/authula/plugins/oauth2/types"
-	rootservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/oauth2/services"
+	"github.com/0oMarko0/authula/plugins/oauth2/types"
+	rootservices "github.com/0oMarko0/authula/services"
 )
 
 type CallbackUseCase struct {

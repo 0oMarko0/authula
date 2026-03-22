@@ -13,12 +13,12 @@ import (
 	"fmt"
 	"time"
 
-	coreservices "github.com/Authula/authula/services"
+	coreservices "github.com/0oMarko0/authula/services"
 	"github.com/google/uuid"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/jwt/repositories"
-	"github.com/Authula/authula/plugins/jwt/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/jwt/repositories"
+	"github.com/0oMarko0/authula/plugins/jwt/types"
 )
 
 type keyService struct {

@@ -10,7 +10,7 @@ import (
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/github"
 
-	"github.com/Authula/authula/plugins/oauth2/types"
+	"github.com/0oMarko0/authula/plugins/oauth2/types"
 )
 
 // GitHubProvider implements OAuth2Provider for GitHub

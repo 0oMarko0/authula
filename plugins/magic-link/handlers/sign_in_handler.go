@@ -3,10 +3,10 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/magic-link/types"
-	"github.com/Authula/authula/plugins/magic-link/usecases"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/magic-link/types"
+	"github.com/0oMarko0/authula/plugins/magic-link/usecases"
 )
 
 type SignInPayload struct {

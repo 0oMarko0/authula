@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/Authula/authula/env"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/env"
+	"github.com/0oMarko0/authula/models"
 	"github.com/lmittmann/tint"
 )
 

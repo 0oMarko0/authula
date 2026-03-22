@@ -3,9 +3,9 @@ package admin
 import (
 	"net/http"
 
-	"github.com/Authula/authula/models"
-	adminhandlers "github.com/Authula/authula/plugins/admin/handlers"
-	"github.com/Authula/authula/plugins/admin/usecases"
+	"github.com/0oMarko0/authula/models"
+	adminhandlers "github.com/0oMarko0/authula/plugins/admin/handlers"
+	"github.com/0oMarko0/authula/plugins/admin/usecases"
 )
 
 type routeUseCases struct {

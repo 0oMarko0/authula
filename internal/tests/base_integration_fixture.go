@@ -8,14 +8,14 @@ import (
 	"github.com/google/uuid"
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/config"
-	"github.com/Authula/authula/events"
-	coreplugins "github.com/Authula/authula/internal/plugins"
-	coreinternalrepos "github.com/Authula/authula/internal/repositories"
-	coreinternalsecurity "github.com/Authula/authula/internal/security"
-	coreinternalservices "github.com/Authula/authula/internal/services"
-	"github.com/Authula/authula/models"
-	coreservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/config"
+	"github.com/0oMarko0/authula/events"
+	coreplugins "github.com/0oMarko0/authula/internal/plugins"
+	coreinternalrepos "github.com/0oMarko0/authula/internal/repositories"
+	coreinternalsecurity "github.com/0oMarko0/authula/internal/security"
+	coreinternalservices "github.com/0oMarko0/authula/internal/services"
+	"github.com/0oMarko0/authula/models"
+	coreservices "github.com/0oMarko0/authula/services"
 )
 
 type BaseTestFixture struct {

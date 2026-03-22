@@ -9,7 +9,7 @@ import (
 )
 
 type User struct {
-	bun.BaseModel `bun:"table:users"`
+	bun.BaseModel `bun:"table:authula_users"`
 
 	ID            string          `json:"id" bun:"column:id,pk"`
 	Name          string          `json:"name" bun:"column:name"`

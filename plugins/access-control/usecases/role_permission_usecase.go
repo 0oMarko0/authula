@@ -3,8 +3,8 @@ package usecases
 import (
 	"context"
 
-	"github.com/Authula/authula/plugins/access-control/services"
-	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/0oMarko0/authula/plugins/access-control/services"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
 )
 
 type RolePermissionUseCase struct {

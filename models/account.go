@@ -7,7 +7,7 @@ import (
 )
 
 type Account struct {
-	bun.BaseModel `bun:"table:accounts"`
+	bun.BaseModel `bun:"table:authula_accounts"`
 
 	ID                    string     `json:"id" bun:"column:id,pk"`
 	UserID                string     `json:"user_id" bun:"column:user_id"`

@@ -8,12 +8,12 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/admin/constants"
-	adminhandlers "github.com/Authula/authula/plugins/admin/handlers"
-	admintests "github.com/Authula/authula/plugins/admin/tests"
-	"github.com/Authula/authula/plugins/admin/types"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/admin/constants"
+	adminhandlers "github.com/0oMarko0/authula/plugins/admin/handlers"
+	admintests "github.com/0oMarko0/authula/plugins/admin/tests"
+	"github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 func TestGetUserStateHandler(t *testing.T) {

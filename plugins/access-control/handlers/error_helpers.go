@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/Authula/authula/plugins/access-control/constants"
+	"github.com/0oMarko0/authula/plugins/access-control/constants"
 )
 
 func mapHttpErrorStatus(err error) int {

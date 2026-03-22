@@ -6,12 +6,12 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/env"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/oauth2/services"
-	"github.com/Authula/authula/plugins/oauth2/types"
-	rootservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/env"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/oauth2/services"
+	"github.com/0oMarko0/authula/plugins/oauth2/types"
+	rootservices "github.com/0oMarko0/authula/services"
 )
 
 type OAuth2Plugin struct {

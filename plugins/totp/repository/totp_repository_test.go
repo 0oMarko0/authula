@@ -11,11 +11,11 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/migrations"
-	totpplugin "github.com/Authula/authula/plugins/totp"
-	"github.com/Authula/authula/plugins/totp/repository"
-	"github.com/Authula/authula/plugins/totp/types"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/migrations"
+	totpplugin "github.com/0oMarko0/authula/plugins/totp"
+	"github.com/0oMarko0/authula/plugins/totp/repository"
+	"github.com/0oMarko0/authula/plugins/totp/types"
 )
 
 func newTestTOTPDB(t *testing.T) *bun.DB {
@@ -45,7 +45,7 @@ func newTestTOTPDB(t *testing.T) *bun.DB {
 func createTestUser(t *testing.T, ctx context.Context, db bun.IDB, userID string) {
 	t.Helper()
 
-	_, err := db.ExecContext(ctx, `INSERT INTO users (id, name, email) VALUES (?, ?, ?)`, userID, "Test User", userID+"@example.com")
+	_, err := db.ExecContext(ctx, `INSERT INTO authula_users (id, name, email) VALUES (?, ?, ?)`, userID, "Test User", userID+"@example.com")
 	require.NoError(t, err)
 }
 

@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 // TestInMemoryProvider tests the in-memory rate limit provider

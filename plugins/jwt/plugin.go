@@ -5,13 +5,13 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/jwt/repositories"
-	jwtservices "github.com/Authula/authula/plugins/jwt/services"
-	"github.com/Authula/authula/plugins/jwt/types"
-	"github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/jwt/repositories"
+	jwtservices "github.com/0oMarko0/authula/plugins/jwt/services"
+	"github.com/0oMarko0/authula/plugins/jwt/types"
+	"github.com/0oMarko0/authula/services"
 )
 
 type JWTPlugin struct {

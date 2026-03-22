@@ -9,9 +9,9 @@ import (
 
 	"github.com/wneessen/go-mail"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/email/constants"
-	"github.com/Authula/authula/plugins/email/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/email/constants"
+	"github.com/0oMarko0/authula/plugins/email/types"
 )
 
 type SMTPProvider struct {

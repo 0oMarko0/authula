@@ -10,12 +10,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/totp/constants"
-	totptests "github.com/Authula/authula/plugins/totp/tests"
-	"github.com/Authula/authula/plugins/totp/types"
-	"github.com/Authula/authula/plugins/totp/usecases"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/totp/constants"
+	totptests "github.com/0oMarko0/authula/plugins/totp/tests"
+	"github.com/0oMarko0/authula/plugins/totp/types"
+	"github.com/0oMarko0/authula/plugins/totp/usecases"
 )
 
 type DisableHandlerSuite struct {

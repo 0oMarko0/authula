@@ -18,8 +18,8 @@ import (
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 	"github.com/uptrace/bun/extra/bundebug"
 
-	"github.com/Authula/authula/env"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/env"
+	"github.com/0oMarko0/authula/models"
 )
 
 // DatabaseOptions configures database initialization

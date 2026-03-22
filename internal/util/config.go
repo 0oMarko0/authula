@@ -7,7 +7,7 @@ import (
 
 	mapstructure "github.com/go-viper/mapstructure/v2"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 // ParsePluginConfig is a utility function to parse plugin configuration from the generic config map.

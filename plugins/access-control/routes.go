@@ -3,9 +3,9 @@ package accesscontrol
 import (
 	"net/http"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/access-control/handlers"
-	"github.com/Authula/authula/plugins/access-control/usecases"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/access-control/handlers"
+	"github.com/0oMarko0/authula/plugins/access-control/usecases"
 )
 
 type routeUseCases struct {

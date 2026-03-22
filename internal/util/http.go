@@ -7,7 +7,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 // MaskIP masks the last octet of an IPv4 address for GDPR compliance

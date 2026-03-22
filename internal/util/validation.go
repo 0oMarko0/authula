@@ -7,7 +7,7 @@ import (
 
 	"github.com/go-playground/validator/v10"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 var Validate *validator.Validate

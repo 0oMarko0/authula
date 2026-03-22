@@ -3,7 +3,7 @@ package repositories
 import (
 	"context"
 
-	"github.com/Authula/authula/plugins/config-manager/types"
+	"github.com/0oMarko0/authula/plugins/config-manager/types"
 )
 
 // AuthSettingsRepository defines the interface for auth settings persistence

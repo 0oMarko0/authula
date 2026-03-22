@@ -4,9 +4,9 @@ import (
 	"context"
 	"strings"
 
-	"github.com/Authula/authula/plugins/access-control/constants"
-	"github.com/Authula/authula/plugins/access-control/repositories"
-	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/0oMarko0/authula/plugins/access-control/constants"
+	"github.com/0oMarko0/authula/plugins/access-control/repositories"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
 )
 
 type UserAccessService struct {

@@ -12,13 +12,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/uptrace/bun"
 
-	authula "github.com/Authula/authula"
-	"github.com/Authula/authula/cmd/shared/configloader"
-	"github.com/Authula/authula/internal/bootstrap"
-	"github.com/Authula/authula/internal/migrationmanager"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
+	authula "github.com/0oMarko0/authula"
+	"github.com/0oMarko0/authula/cmd/shared/configloader"
+	"github.com/0oMarko0/authula/internal/bootstrap"
+	"github.com/0oMarko0/authula/internal/migrationmanager"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
 )
 
 var (

@@ -7,7 +7,7 @@ import (
 )
 
 type TOTPRecord struct {
-	bun.BaseModel `bun:"table:totp"`
+	bun.BaseModel `bun:"table:authula_totp"`
 
 	ID          string    `bun:"column:id,pk"`
 	UserID      string    `bun:"column:user_id"`
@@ -19,7 +19,7 @@ type TOTPRecord struct {
 }
 
 type TrustedDevice struct {
-	bun.BaseModel `bun:"table:trusted_devices"`
+	bun.BaseModel `bun:"table:authula_trusted_devices"`
 
 	ID        string    `bun:"column:id,pk"`
 	UserID    string    `bun:"column:user_id"`

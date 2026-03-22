@@ -15,12 +15,12 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	"github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/totp/constants"
-	"github.com/Authula/authula/plugins/totp/repository"
-	"github.com/Authula/authula/plugins/totp/types"
+	"github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/totp/constants"
+	"github.com/0oMarko0/authula/plugins/totp/repository"
+	"github.com/0oMarko0/authula/plugins/totp/types"
 )
 
 func buildTestPlugin(t *testing.T) (*TOTPPlugin, *tests.MockUserService, *tests.MockTokenService, *tests.MockVerificationService) {
@@ -119,9 +119,9 @@ func TestInterceptHook(t *testing.T) {
 				t.Helper()
 
 				ctx := context.Background()
-				_, err := db.ExecContext(ctx, `INSERT INTO users (id, name, email) VALUES (?, ?, ?)`, "user-1", "User One", "user1@example.com")
+				_, err := db.ExecContext(ctx, `INSERT INTO authula_users (id, name, email) VALUES (?, ?, ?)`, "user-1", "User One", "user1@example.com")
 				require.NoError(t, err)
-				_, err = db.ExecContext(ctx, `INSERT INTO users (id, name, email) VALUES (?, ?, ?)`, "user-2", "User Two", "user2@example.com")
+				_, err = db.ExecContext(ctx, `INSERT INTO authula_users (id, name, email) VALUES (?, ?, ?)`, "user-2", "User Two", "user2@example.com")
 				require.NoError(t, err)
 
 				plugin.totpRepo = totpRepo
@@ -164,7 +164,7 @@ func TestInterceptHook(t *testing.T) {
 				t.Helper()
 
 				ctx := context.Background()
-				_, err := db.ExecContext(ctx, `INSERT INTO users (id, name, email) VALUES (?, ?, ?)`, "user-1", "User One", "user1@example.com")
+				_, err := db.ExecContext(ctx, `INSERT INTO authula_users (id, name, email) VALUES (?, ?, ?)`, "user-1", "User One", "user1@example.com")
 				require.NoError(t, err)
 
 				plugin.totpRepo = totpRepo

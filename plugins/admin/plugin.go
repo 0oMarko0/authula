@@ -3,14 +3,14 @@ package admin
 import (
 	"fmt"
 
-	coreinternalrepos "github.com/Authula/authula/internal/repositories"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/admin/repositories"
-	"github.com/Authula/authula/plugins/admin/types"
-	"github.com/Authula/authula/plugins/admin/usecases"
-	rootservices "github.com/Authula/authula/services"
+	coreinternalrepos "github.com/0oMarko0/authula/internal/repositories"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/admin/repositories"
+	"github.com/0oMarko0/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/plugins/admin/usecases"
+	rootservices "github.com/0oMarko0/authula/services"
 )
 
 type AdminPlugin struct {

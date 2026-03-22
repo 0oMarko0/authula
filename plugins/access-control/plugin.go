@@ -1,13 +1,13 @@
 package accesscontrol
 
 import (
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/access-control/repositories"
-	"github.com/Authula/authula/plugins/access-control/services"
-	"github.com/Authula/authula/plugins/access-control/types"
-	"github.com/Authula/authula/plugins/access-control/usecases"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/access-control/repositories"
+	"github.com/0oMarko0/authula/plugins/access-control/services"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
+	"github.com/0oMarko0/authula/plugins/access-control/usecases"
 )
 
 type AccessControlPlugin struct {

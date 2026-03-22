@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Authula/authula/internal/router"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
-	rootservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal/router"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
+	rootservices "github.com/0oMarko0/authula/services"
 )
 
 type mockServiceRegistry struct {

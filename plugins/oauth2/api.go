@@ -3,8 +3,8 @@ package oauth2
 import (
 	"context"
 
-	"github.com/Authula/authula/plugins/oauth2/types"
-	"github.com/Authula/authula/plugins/oauth2/usecases"
+	"github.com/0oMarko0/authula/plugins/oauth2/types"
+	"github.com/0oMarko0/authula/plugins/oauth2/usecases"
 )
 
 type API struct {

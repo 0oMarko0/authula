@@ -5,7 +5,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/migrations"
+	"github.com/0oMarko0/authula/migrations"
 )
 
 func rateLimitMigrationsForProvider(provider string) []migrations.Migration {
@@ -24,16 +24,16 @@ func rateLimitSQLiteInitial() migrations.Migration {
 				ctx,
 				tx,
 				`PRAGMA temp_store = MEMORY;`,
-				`CREATE TEMP TABLE IF NOT EXISTS rate_limits (
+				`CREATE TEMP TABLE IF NOT EXISTS authula_rate_limits (
   key TEXT PRIMARY KEY,
   count INTEGER NOT NULL,
   expires_at DATETIME NOT NULL
 );`,
-				`CREATE INDEX IF NOT EXISTS idx_rate_limits_expires_at ON rate_limits(expires_at);`,
+				`CREATE INDEX IF NOT EXISTS idx_rate_limits_expires_at ON authula_rate_limits(expires_at);`,
 			)
 		},
 		Down: func(ctx context.Context, tx bun.Tx) error {
-			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS rate_limits;`)
+			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS authula_rate_limits;`)
 		},
 	}
 }
@@ -45,16 +45,16 @@ func rateLimitPostgresInitial() migrations.Migration {
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`CREATE UNLOGGED TABLE IF NOT EXISTS rate_limits (
+				`CREATE UNLOGGED TABLE IF NOT EXISTS authula_rate_limits (
   key VARCHAR(255) PRIMARY KEY,
   count INTEGER NOT NULL,
   expires_at TIMESTAMP WITH TIME ZONE NOT NULL
 );`,
-				`CREATE INDEX IF NOT EXISTS idx_rate_limits_expires_at ON rate_limits(expires_at);`,
+				`CREATE INDEX IF NOT EXISTS idx_rate_limits_expires_at ON authula_rate_limits(expires_at);`,
 			)
 		},
 		Down: func(ctx context.Context, tx bun.Tx) error {
-			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS rate_limits;`)
+			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS authula_rate_limits;`)
 		},
 	}
 }
@@ -66,7 +66,7 @@ func rateLimitMySQLInitial() migrations.Migration {
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`CREATE TABLE IF NOT EXISTS rate_limits (
+				`CREATE TABLE IF NOT EXISTS authula_rate_limits (
   key VARCHAR(255) PRIMARY KEY,
   count INTEGER NOT NULL,
   expires_at TIMESTAMP NOT NULL
@@ -74,7 +74,7 @@ func rateLimitMySQLInitial() migrations.Migration {
 			)
 		},
 		Down: func(ctx context.Context, tx bun.Tx) error {
-			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS rate_limits;`)
+			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS authula_rate_limits;`)
 		},
 	}
 }

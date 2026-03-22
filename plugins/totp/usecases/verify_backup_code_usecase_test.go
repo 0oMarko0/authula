@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/totp/constants"
-	"github.com/Authula/authula/plugins/totp/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/totp/constants"
+	"github.com/0oMarko0/authula/plugins/totp/types"
 )
 
 func TestVerifyBackupCodeUseCase(t *testing.T) {

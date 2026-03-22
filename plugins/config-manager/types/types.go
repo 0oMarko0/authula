@@ -14,7 +14,7 @@ type ConfigManagerPluginConfig struct {
 // AuthSettings stores dynamic configuration for the auth system in the database.
 // This is used primarily in database mode to persist the full runtime configuration.
 type AuthSettings struct {
-	bun.BaseModel `bun:"table:auth_settings"`
+	bun.BaseModel `bun:"table:authula_auth_settings"`
 
 	// ConfigVersion is the version number for optimistic concurrency control
 	ConfigVersion int64 `json:"config_version" bun:"column:config_version,pk"`

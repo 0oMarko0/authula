@@ -5,7 +5,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/migrations"
+	"github.com/0oMarko0/authula/migrations"
 )
 
 func accessControlMigrationsForProvider(provider string) []migrations.Migration {
@@ -51,7 +51,7 @@ func accessControlSQLiteInitial() migrations.Migration {
           PRIMARY KEY (role_id, permission_id),
           FOREIGN KEY (role_id) REFERENCES access_control_roles(id) ON DELETE CASCADE,
           FOREIGN KEY (permission_id) REFERENCES access_control_permissions(id) ON DELETE CASCADE,
-          FOREIGN KEY (granted_by_user_id) REFERENCES users(id) ON DELETE SET NULL
+          FOREIGN KEY (granted_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL
         );`,
 				`CREATE INDEX IF NOT EXISTS idx_access_control_role_permissions_role_id ON access_control_role_permissions(role_id);`,
 				`CREATE INDEX IF NOT EXISTS idx_access_control_role_permissions_permission_id ON access_control_role_permissions(permission_id);`,
@@ -63,7 +63,7 @@ func accessControlSQLiteInitial() migrations.Migration {
           assigned_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           expires_at TIMESTAMP,
           PRIMARY KEY (user_id, role_id),
-          FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+          FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
           FOREIGN KEY (role_id) REFERENCES access_control_roles(id) ON DELETE CASCADE,
           FOREIGN KEY (assigned_by_user_id) REFERENCES users(id) ON DELETE SET NULL
         );`,
@@ -137,7 +137,7 @@ func accessControlPostgresInitial() migrations.Migration {
           PRIMARY KEY (role_id, permission_id),
           CONSTRAINT fk_access_control_role_permissions_role FOREIGN KEY (role_id) REFERENCES access_control_roles(id) ON DELETE CASCADE,
           CONSTRAINT fk_access_control_role_permissions_permission FOREIGN KEY (permission_id) REFERENCES access_control_permissions(id) ON DELETE CASCADE,
-          CONSTRAINT fk_access_control_role_permissions_granted_by FOREIGN KEY (granted_by_user_id) REFERENCES users(id) ON DELETE SET NULL
+          CONSTRAINT fk_access_control_role_permissions_granted_by FOREIGN KEY (granted_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL
         );`,
 				`CREATE INDEX IF NOT EXISTS idx_access_control_role_permissions_role_id ON access_control_role_permissions(role_id);`,
 				`CREATE INDEX IF NOT EXISTS idx_access_control_role_permissions_permission_id ON access_control_role_permissions(permission_id);`,
@@ -149,9 +149,9 @@ func accessControlPostgresInitial() migrations.Migration {
           assigned_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
           expires_at TIMESTAMP WITH TIME ZONE,
           PRIMARY KEY (user_id, role_id),
-          CONSTRAINT fk_access_control_user_roles_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+          CONSTRAINT fk_access_control_user_roles_user FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
           CONSTRAINT fk_access_control_user_roles_role FOREIGN KEY (role_id) REFERENCES access_control_roles(id) ON DELETE CASCADE,
-          CONSTRAINT fk_access_control_user_roles_assigned_by FOREIGN KEY (assigned_by_user_id) REFERENCES users(id) ON DELETE SET NULL
+          CONSTRAINT fk_access_control_user_roles_assigned_by FOREIGN KEY (assigned_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL
         );`,
 				`CREATE INDEX IF NOT EXISTS idx_access_control_user_roles_role_id ON access_control_user_roles(role_id);`,
 				`CREATE INDEX IF NOT EXISTS idx_access_control_user_roles_expires_at ON access_control_user_roles(expires_at);`,
@@ -207,7 +207,7 @@ func accessControlMySQLInitial() migrations.Migration {
           PRIMARY KEY (role_id, permission_id),
           CONSTRAINT fk_access_control_role_permissions_role_id FOREIGN KEY (role_id) REFERENCES access_control_roles(id) ON DELETE CASCADE,
           CONSTRAINT fk_access_control_role_permissions_permission_id FOREIGN KEY (permission_id) REFERENCES access_control_permissions(id) ON DELETE CASCADE,
-          CONSTRAINT fk_access_control_role_permissions_granted_by_user_id FOREIGN KEY (granted_by_user_id) REFERENCES users(id) ON DELETE SET NULL,
+          CONSTRAINT fk_access_control_role_permissions_granted_by_user_id FOREIGN KEY (granted_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
           INDEX idx_access_control_role_permissions_role_id (role_id),
           INDEX idx_access_control_role_permissions_permission_id (permission_id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;`,
@@ -219,9 +219,9 @@ func accessControlMySQLInitial() migrations.Migration {
           assigned_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           expires_at TIMESTAMP NULL,
           PRIMARY KEY (user_id, role_id),
-          CONSTRAINT fk_access_control_user_roles_user_id FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+          CONSTRAINT fk_access_control_user_roles_user_id FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
           CONSTRAINT fk_access_control_user_roles_role_id FOREIGN KEY (role_id) REFERENCES access_control_roles(id) ON DELETE CASCADE,
-          CONSTRAINT fk_access_control_user_roles_assigned_by_user_id FOREIGN KEY (assigned_by_user_id) REFERENCES users(id) ON DELETE SET NULL,
+          CONSTRAINT fk_access_control_user_roles_assigned_by_user_id FOREIGN KEY (assigned_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
           INDEX idx_access_control_user_roles_role_id (role_id),
           INDEX idx_access_control_user_roles_expires_at (expires_at)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;`,

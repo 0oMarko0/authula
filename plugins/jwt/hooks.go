@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/jwt/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/jwt/types"
 )
 
 type JWTHookID string

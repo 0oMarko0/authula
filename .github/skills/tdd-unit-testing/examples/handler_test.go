@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/models"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/models"
 )
 
 type Todo struct {

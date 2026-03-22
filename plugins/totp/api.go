@@ -1,7 +1,7 @@
 package totp
 
 import (
-	"github.com/Authula/authula/plugins/totp/usecases"
+	"github.com/0oMarko0/authula/plugins/totp/usecases"
 )
 
 type API struct {

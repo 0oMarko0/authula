@@ -5,9 +5,9 @@ import (
 	"maps"
 	"sync"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/config-manager/constants"
-	"github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/config-manager/constants"
+	"github.com/0oMarko0/authula/services"
 )
 
 // ConfigManagerService implements the ConfigManagerAPI interface.

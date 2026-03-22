@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/config-manager/handlers"
-	configmanagerservices "github.com/Authula/authula/plugins/config-manager/services"
-	"github.com/Authula/authula/plugins/config-manager/types"
-	"github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/config-manager/handlers"
+	configmanagerservices "github.com/0oMarko0/authula/plugins/config-manager/services"
+	"github.com/0oMarko0/authula/plugins/config-manager/types"
+	"github.com/0oMarko0/authula/services"
 )
 
 type ConfigManagerPlugin struct {

@@ -3,7 +3,7 @@ package services
 import (
 	"context"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 type ConfigManagerService interface {

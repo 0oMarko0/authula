@@ -3,11 +3,11 @@ package internal
 import (
 	"context"
 
-	"github.com/Authula/authula/internal/handlers"
-	"github.com/Authula/authula/internal/types"
-	"github.com/Authula/authula/internal/usecases"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal/handlers"
+	"github.com/0oMarko0/authula/internal/types"
+	"github.com/0oMarko0/authula/internal/usecases"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/services"
 )
 
 type CoreAPI interface {

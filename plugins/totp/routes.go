@@ -3,8 +3,8 @@ package totp
 import (
 	"net/http"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/totp/handlers"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/totp/handlers"
 )
 
 func Routes(p *TOTPPlugin) []models.Route {

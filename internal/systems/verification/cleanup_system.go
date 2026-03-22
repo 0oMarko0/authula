@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/services"
 )
 
 type VerificationCleanupSystem struct {

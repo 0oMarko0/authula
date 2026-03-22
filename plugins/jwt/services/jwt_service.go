@@ -12,9 +12,9 @@ import (
 	"github.com/lestrrat-go/jwx/v3/jwk"
 	"github.com/lestrrat-go/jwx/v3/jwt"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/jwt/types"
-	"github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/jwt/types"
+	"github.com/0oMarko0/authula/services"
 )
 
 // JWTServiceImpl is the concrete implementation of the JWTService interface

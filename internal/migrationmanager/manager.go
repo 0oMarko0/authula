@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	migrationsmodule "github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
+	migrationsmodule "github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
 )
 
 // PluginSelector determines whether a plugin should participate in a migration operation.

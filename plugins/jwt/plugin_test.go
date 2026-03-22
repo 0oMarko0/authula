@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/jwt/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/jwt/types"
 )
 
 func TestJWTPluginConfig_DefaultConfig(t *testing.T) {

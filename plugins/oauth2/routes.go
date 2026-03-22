@@ -1,8 +1,8 @@
 package oauth2
 
 import (
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/oauth2/handlers"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/oauth2/handlers"
 )
 
 func Routes(plugin *OAuth2Plugin) []models.Route {

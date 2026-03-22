@@ -4,7 +4,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 	"github.com/stretchr/testify/assert"
 )
 

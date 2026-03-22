@@ -11,7 +11,7 @@ This adapter manually builds `net/http` requests from Fiber's context, ensuring 
 ## Installation
 
 ```bash
-go get github.com/Authula/authula
+go get github.com/0oMarko0/authula
 ```
 
 ## Usage
@@ -24,9 +24,9 @@ import (
 
 	"github.com/gofiber/fiber/v3"
 
-	authula "github.com/Authula/authula"
-	authulaconfig "github.com/Authula/authula/config"
-	fiberadapter "github.com/Authula/authula/adapters/fiber"
+	authula "github.com/0oMarko0/authula"
+	authulaconfig "github.com/0oMarko0/authula/config"
+	fiberadapter "github.com/0oMarko0/authula/adapters/fiber"
 )
 
 func main() {

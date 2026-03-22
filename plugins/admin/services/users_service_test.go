@@ -8,11 +8,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/models"
-	adminconstants "github.com/Authula/authula/plugins/admin/constants"
-	adminservices "github.com/Authula/authula/plugins/admin/services"
-	admintypes "github.com/Authula/authula/plugins/admin/types"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/models"
+	adminconstants "github.com/0oMarko0/authula/plugins/admin/constants"
+	adminservices "github.com/0oMarko0/authula/plugins/admin/services"
+	admintypes "github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 func newUsersServiceFixture() (*adminservices.UsersService, *internaltests.MockUserRepository) {

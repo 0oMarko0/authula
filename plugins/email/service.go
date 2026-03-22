@@ -6,9 +6,9 @@ import (
 	"html/template"
 	texttemplate "text/template"
 
-	"github.com/Authula/authula/models"
-	emailtypes "github.com/Authula/authula/plugins/email/types"
-	rootservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/models"
+	emailtypes "github.com/0oMarko0/authula/plugins/email/types"
+	rootservices "github.com/0oMarko0/authula/services"
 )
 
 type EmailService struct {

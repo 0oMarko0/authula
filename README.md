@@ -3,16 +3,16 @@
 </p>
 
 <div align="center">
-  <a href="https://github.com/Authula/authula/stargazers" target="_parent">
+  <a href="https://github.com/0oMarko0/authula/stargazers" target="_parent">
     <img src="https://img.shields.io/github/stars/Authula/authula.svg?style=social&label=Star" alt="GitHub stars" />
   </a>
-  <a href="https://goreportcard.com/report/github.com/Authula/authula" target="_parent">
-    <img src="https://goreportcard.com/badge/github.com/Authula/authula" alt="Go Report Card" />
+  <a href="https://goreportcard.com/report/github.com/0oMarko0/authula" target="_parent">
+    <img src="https://goreportcard.com/badge/github.com/0oMarko0/authula" alt="Go Report Card" />
   </a>
-  <a href="https://pkg.go.dev/github.com/Authula/authula" target="_parent">
-    <img src="https://pkg.go.dev/badge/github.com/Authula/authula.svg" alt="Go Reference" />
+  <a href="https://pkg.go.dev/github.com/0oMarko0/authula" target="_parent">
+    <img src="https://pkg.go.dev/badge/github.com/0oMarko0/authula.svg" alt="Go Reference" />
   </a>
-  <a href="https://github.com/Authula/authula/blob/main/LICENSE" target="_parent">
+  <a href="https://github.com/0oMarko0/authula/blob/main/LICENSE" target="_parent">
     <img src="https://img.shields.io/github/license/Authula/authula.svg" alt="License" />
   </a>
 </div>
@@ -119,10 +119,10 @@ Embed Authula directly into your Go application:
 
 ```go
 import (
-  authula "github.com/Authula/authula"
-  authulaconfig "github.com/Authula/authula/config"
-  authulamodels "github.com/Authula/authula/models"
-  authulaenv "github.com/Authula/authula/env"
+  authula "github.com/0oMarko0/authula"
+  authulaconfig "github.com/0oMarko0/authula/config"
+  authulamodels "github.com/0oMarko0/authula/models"
+  authulaenv "github.com/0oMarko0/authula/env"
 )
 
 config := authulaconfig.NewConfig(
@@ -196,7 +196,7 @@ For more info and a full guide on how to use this library, check out the [Docs](
 
 We provide the following SDKs to facilitate easy integration with Authula:
 
-- [Node.js SDK](https://github.com/Authula/authula-node-sdk)
+- [Node.js SDK](https://github.com/0oMarko0/authula-node-sdk)
 
 ---
 
@@ -204,9 +204,9 @@ We provide the following SDKs to facilitate easy integration with Authula:
 
 Your contributions are welcome! Here's how you can get involved:
 
-- If you find a bug, please [submit an issue](https://github.com/Authula/authula/issues).
+- If you find a bug, please [submit an issue](https://github.com/0oMarko0/authula/issues).
 - Set up your development environment by following our [Contribution Guide](./.github/CONTRIBUTING.md).
-- Contribute code by making a [pull request](https://github.com/Authula/authula/) to enhance features, improve user experience, or fix issues.
+- Contribute code by making a [pull request](https://github.com/0oMarko0/authula/) to enhance features, improve user experience, or fix issues.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Authula/authula&type=date&legend=top-left)](https://www.star-history.com/#Authula/authula&type=date&legend=top-left)
 

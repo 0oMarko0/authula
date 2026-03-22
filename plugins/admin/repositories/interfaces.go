@@ -3,7 +3,7 @@ package repositories
 import (
 	"context"
 
-	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 type UserStateRepository interface {

@@ -3,7 +3,7 @@ package repositories
 import (
 	"context"
 
-	"github.com/Authula/authula/plugins/jwt/types"
+	"github.com/0oMarko0/authula/plugins/jwt/types"
 )
 
 // RefreshTokenRepository provides data access for refresh token records

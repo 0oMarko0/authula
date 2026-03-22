@@ -5,8 +5,8 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
 )
 
 // MigrationSet returns the TOTP plugin migrations as a migration set
@@ -33,7 +33,7 @@ func totpSQLiteInitial() migrations.Migration {
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`CREATE TABLE IF NOT EXISTS totp (
+				`CREATE TABLE IF NOT EXISTS authula_totp (
 					id VARCHAR(36) PRIMARY KEY,
 					user_id VARCHAR(36) NOT NULL,
 					secret TEXT NOT NULL,
@@ -41,29 +41,29 @@ func totpSQLiteInitial() migrations.Migration {
 					enabled BOOLEAN NOT NULL DEFAULT FALSE,
 					created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 					updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-					FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+					FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE
 				);`,
-				`CREATE UNIQUE INDEX IF NOT EXISTS idx_totp_user_id ON totp(user_id);`,
-				`CREATE TABLE IF NOT EXISTS trusted_devices (
+				`CREATE UNIQUE INDEX IF NOT EXISTS idx_totp_user_id ON authula_totp(user_id);`,
+				`CREATE TABLE IF NOT EXISTS authula_trusted_devices (
 					id VARCHAR(36) PRIMARY KEY,
 					user_id VARCHAR(36) NOT NULL,
 					token VARCHAR(64) NOT NULL,
 					user_agent TEXT NOT NULL DEFAULT '',
 					expires_at TIMESTAMP NOT NULL,
 					created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-					FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+					FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE
 				);`,
-				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_user_id ON trusted_devices(user_id);`,
-				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_token ON trusted_devices(token);`,
-				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_expires_at ON trusted_devices(expires_at);`,
+				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_user_id ON authula_trusted_devices(user_id);`,
+				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_token ON authula_trusted_devices(token);`,
+				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_expires_at ON authula_trusted_devices(expires_at);`,
 			)
 		},
 		Down: func(ctx context.Context, tx bun.Tx) error {
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`DROP TABLE IF EXISTS trusted_devices;`,
-				`DROP TABLE IF EXISTS totp;`,
+				`DROP TABLE IF EXISTS authula_trusted_devices;`,
+				`DROP TABLE IF EXISTS authula_totp;`,
 			)
 		},
 	}
@@ -83,42 +83,42 @@ func totpPostgresInitial() migrations.Migration {
 						RETURN NEW;
 					END;
 				$$ LANGUAGE plpgsql;`,
-				`CREATE TABLE IF NOT EXISTS totp (
+				`CREATE TABLE IF NOT EXISTS authula_totp (
 					id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-					user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+					user_id UUID NOT NULL REFERENCES authula_users(id) ON DELETE CASCADE,
 					secret TEXT NOT NULL,
 					backup_codes TEXT NOT NULL,
 					enabled BOOLEAN NOT NULL DEFAULT FALSE,
 					created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
 					updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 				);`,
-				`CREATE UNIQUE INDEX IF NOT EXISTS idx_totp_user_id ON totp(user_id);`,
-				`DROP TRIGGER IF EXISTS totp_update_updated_at_trigger ON totp;`,
+				`CREATE UNIQUE INDEX IF NOT EXISTS idx_totp_user_id ON authula_totp(user_id);`,
+				`DROP TRIGGER IF EXISTS totp_update_updated_at_trigger ON authula_totp;`,
 				`CREATE TRIGGER totp_update_updated_at_trigger
-					BEFORE UPDATE ON totp
+					BEFORE UPDATE ON authula_totp
 					FOR EACH ROW
 					EXECUTE FUNCTION totp_update_updated_at_func();`,
-				`CREATE TABLE IF NOT EXISTS trusted_devices (
+				`CREATE TABLE IF NOT EXISTS authula_trusted_devices (
 					id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-					user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+					user_id UUID NOT NULL REFERENCES authula_users(id) ON DELETE CASCADE,
 					token VARCHAR(64) NOT NULL,
 					user_agent TEXT NOT NULL DEFAULT '',
 					expires_at TIMESTAMPTZ NOT NULL,
 					created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 				);`,
-				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_user_id ON trusted_devices(user_id);`,
-				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_token ON trusted_devices(token);`,
-				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_expires_at ON trusted_devices(expires_at);`,
+				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_user_id ON authula_trusted_devices(user_id);`,
+				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_token ON authula_trusted_devices(token);`,
+				`CREATE INDEX IF NOT EXISTS idx_trusted_devices_expires_at ON authula_trusted_devices(expires_at);`,
 			)
 		},
 		Down: func(ctx context.Context, tx bun.Tx) error {
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`DROP TRIGGER IF EXISTS totp_update_updated_at_trigger ON totp;`,
+				`DROP TRIGGER IF EXISTS totp_update_updated_at_trigger ON authula_totp;`,
 				`DROP FUNCTION IF EXISTS totp_update_updated_at_func();`,
-				`DROP TABLE IF EXISTS trusted_devices;`,
-				`DROP TABLE IF EXISTS totp;`,
+				`DROP TABLE IF EXISTS authula_trusted_devices;`,
+				`DROP TABLE IF EXISTS authula_totp;`,
 			)
 		},
 	}
@@ -131,7 +131,7 @@ func totpMySQLInitial() migrations.Migration {
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`CREATE TABLE IF NOT EXISTS totp (
+				`CREATE TABLE IF NOT EXISTS authula_totp (
 					id BINARY(16) NOT NULL PRIMARY KEY,
 					user_id BINARY(16) NOT NULL,
 					secret TEXT NOT NULL,
@@ -139,17 +139,17 @@ func totpMySQLInitial() migrations.Migration {
 					enabled BOOLEAN NOT NULL DEFAULT FALSE,
 					created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 					updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-					FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+					FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
 					UNIQUE INDEX idx_totp_user_id (user_id)
 				) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;`,
-				`CREATE TABLE IF NOT EXISTS trusted_devices (
+				`CREATE TABLE IF NOT EXISTS authula_trusted_devices (
 					id BINARY(16) NOT NULL PRIMARY KEY,
 					user_id BINARY(16) NOT NULL,
 					token VARCHAR(255) NOT NULL,
 					user_agent TEXT NOT NULL,
 					expires_at TIMESTAMP NOT NULL,
 					created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-					FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+					FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
 					INDEX idx_trusted_devices_user_id (user_id),
 					INDEX idx_trusted_devices_token (token),
 					INDEX idx_trusted_devices_expires_at (expires_at)
@@ -160,8 +160,8 @@ func totpMySQLInitial() migrations.Migration {
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`DROP TABLE IF EXISTS trusted_devices;`,
-				`DROP TABLE IF EXISTS totp;`,
+				`DROP TABLE IF EXISTS authula_trusted_devices;`,
+				`DROP TABLE IF EXISTS authula_totp;`,
 			)
 		},
 	}

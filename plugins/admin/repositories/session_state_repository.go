@@ -11,8 +11,8 @@ import (
 	"github.com/uptrace/bun/dialect/pgdialect"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 type BunSessionStateRepository struct {

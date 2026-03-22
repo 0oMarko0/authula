@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/email-password/usecases"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/email-password/usecases"
 )
 
 type VerifyEmailHandler struct {

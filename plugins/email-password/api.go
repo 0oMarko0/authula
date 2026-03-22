@@ -5,10 +5,10 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/email-password/handlers"
-	"github.com/Authula/authula/plugins/email-password/types"
-	"github.com/Authula/authula/plugins/email-password/usecases"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/email-password/handlers"
+	"github.com/0oMarko0/authula/plugins/email-password/types"
+	"github.com/0oMarko0/authula/plugins/email-password/usecases"
 )
 
 type API struct {

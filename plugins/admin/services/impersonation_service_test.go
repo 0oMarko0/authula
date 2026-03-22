@@ -8,12 +8,12 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/models"
-	adminconstants "github.com/Authula/authula/plugins/admin/constants"
-	adminservices "github.com/Authula/authula/plugins/admin/services"
-	admintests "github.com/Authula/authula/plugins/admin/tests"
-	admintypes "github.com/Authula/authula/plugins/admin/types"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/models"
+	adminconstants "github.com/0oMarko0/authula/plugins/admin/constants"
+	adminservices "github.com/0oMarko0/authula/plugins/admin/services"
+	admintests "github.com/0oMarko0/authula/plugins/admin/tests"
+	admintypes "github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 func newImpersonationServiceFixture() (*adminservices.ImpersonationService, *admintests.MockImpersonationRepository, *admintests.MockSessionStateRepository, *internaltests.MockSessionService, *internaltests.MockTokenService) {

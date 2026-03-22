@@ -10,12 +10,12 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/jwt/constants"
-	"github.com/Authula/authula/plugins/jwt/events"
-	"github.com/Authula/authula/plugins/jwt/types"
-	coreservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/jwt/constants"
+	"github.com/0oMarko0/authula/plugins/jwt/events"
+	"github.com/0oMarko0/authula/plugins/jwt/types"
+	coreservices "github.com/0oMarko0/authula/services"
 )
 
 type refreshTokenService struct {

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	coreservices "github.com/Authula/authula/internal/services"
+	coreservices "github.com/0oMarko0/authula/internal/services"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 // DeferredResponseWriter buffers response writes to allow hooks to modify headers after handler execution.

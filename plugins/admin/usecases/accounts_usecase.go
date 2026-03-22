@@ -4,10 +4,10 @@ import (
 	"context"
 	"strings"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/admin/constants"
-	"github.com/Authula/authula/plugins/admin/services"
-	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/admin/constants"
+	"github.com/0oMarko0/authula/plugins/admin/services"
+	"github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 type AccountsUseCase struct {

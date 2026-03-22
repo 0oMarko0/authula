@@ -22,9 +22,9 @@ import (
 	"github.com/redis/go-redis/v9"
 	"zombiezen.com/go/sqlite/sqlitex"
 
-	"github.com/Authula/authula/env"
-	"github.com/Authula/authula/events"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/env"
+	"github.com/0oMarko0/authula/events"
+	"github.com/0oMarko0/authula/models"
 )
 
 // InitWatermillProvider initializes a Watermill PubSub based on the provider config

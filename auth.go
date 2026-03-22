@@ -8,13 +8,13 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/internal"
-	"github.com/Authula/authula/internal/migrationmanager"
-	"github.com/Authula/authula/internal/plugins"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
-	coreservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal"
+	"github.com/0oMarko0/authula/internal/migrationmanager"
+	"github.com/0oMarko0/authula/internal/plugins"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
+	coreservices "github.com/0oMarko0/authula/services"
 )
 
 type AuthConfig struct {

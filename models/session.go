@@ -7,7 +7,7 @@ import (
 )
 
 type Session struct {
-	bun.BaseModel `bun:"table:sessions"`
+	bun.BaseModel `bun:"table:authula_sessions"`
 
 	ID        string    `json:"id" bun:"column:id,pk"`
 	UserID    string    `json:"user_id" bun:"column:user_id"`

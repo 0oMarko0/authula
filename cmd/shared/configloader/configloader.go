@@ -8,8 +8,8 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	authulaconfig "github.com/Authula/authula/config"
-	authulamodels "github.com/Authula/authula/models"
+	authulaconfig "github.com/0oMarko0/authula/config"
+	authulamodels "github.com/0oMarko0/authula/models"
 )
 
 // Load reads a TOML config file and returns the normalized runtime config.

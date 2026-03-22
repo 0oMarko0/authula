@@ -7,11 +7,11 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/totp/services"
-	totptests "github.com/Authula/authula/plugins/totp/tests"
-	"github.com/Authula/authula/plugins/totp/types"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/totp/services"
+	totptests "github.com/0oMarko0/authula/plugins/totp/tests"
+	"github.com/0oMarko0/authula/plugins/totp/types"
 )
 
 type testFixture struct {

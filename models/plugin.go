@@ -6,7 +6,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/migrations"
+	"github.com/0oMarko0/authula/migrations"
 )
 
 type PluginID string

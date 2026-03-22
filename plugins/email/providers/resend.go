@@ -8,9 +8,9 @@ import (
 
 	"github.com/resend/resend-go/v3"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/email/constants"
-	emailtypes "github.com/Authula/authula/plugins/email/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/email/constants"
+	emailtypes "github.com/0oMarko0/authula/plugins/email/types"
 )
 
 type ResendProvider struct {

@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/plugins/config-manager/constants"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/plugins/config-manager/constants"
 )
 
 func ConfigManagerAuthMiddleware(next http.Handler) http.Handler {

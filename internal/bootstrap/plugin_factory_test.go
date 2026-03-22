@@ -3,7 +3,7 @@ package bootstrap
 import (
 	"testing"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 func assertPanic(t *testing.T, f func()) {

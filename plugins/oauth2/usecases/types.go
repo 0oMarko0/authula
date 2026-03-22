@@ -1,7 +1,7 @@
 package usecases
 
 import (
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 // AuthorizeResult contains the result of an authorization request

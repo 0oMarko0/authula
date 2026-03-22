@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/Authula/authula/plugins/admin/constants"
+	"github.com/0oMarko0/authula/plugins/admin/constants"
 )
 
 func mapAdminHttpErrorStatus(err error) int {

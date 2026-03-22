@@ -6,7 +6,7 @@ import (
 
 	"github.com/lestrrat-go/jwx/v3/jwk"
 
-	"github.com/Authula/authula/plugins/jwt/types"
+	"github.com/0oMarko0/authula/plugins/jwt/types"
 )
 
 // RefreshTokenResponse contains the result of a token refresh operation

@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	"github.com/Authula/authula/internal/repositories"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/internal/repositories"
+	"github.com/0oMarko0/authula/models"
 	"github.com/uptrace/bun"
 )
 

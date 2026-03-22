@@ -3,9 +3,9 @@ package usecases
 import (
 	"context"
 
-	"github.com/Authula/authula/internal/types"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/services"
 )
 
 type SignOutUseCase struct {

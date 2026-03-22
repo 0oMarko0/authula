@@ -9,7 +9,7 @@ import (
 // KeyValueStore represents the persistent key-value store table in the database.
 // This is a domain model used for secondary storage operations.
 type KeyValueStore struct {
-	bun.BaseModel `bun:"table:key_value_store"`
+	bun.BaseModel `bun:"table:authula_key_value_store"`
 
 	Key       string     `json:"key" bun:"column:key,pk"`
 	Value     string     `json:"value" bun:"column:value"`

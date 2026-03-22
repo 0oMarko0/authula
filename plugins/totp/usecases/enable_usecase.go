@@ -4,11 +4,11 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/totp/constants"
-	"github.com/Authula/authula/plugins/totp/services"
-	"github.com/Authula/authula/plugins/totp/types"
-	rootservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/totp/constants"
+	"github.com/0oMarko0/authula/plugins/totp/services"
+	"github.com/0oMarko0/authula/plugins/totp/types"
+	rootservices "github.com/0oMarko0/authula/services"
 )
 
 type EnableUseCase struct {

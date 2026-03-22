@@ -11,9 +11,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/plugins/totp/systems"
-	"github.com/Authula/authula/plugins/totp/types"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/plugins/totp/systems"
+	"github.com/0oMarko0/authula/plugins/totp/types"
 )
 
 // ---------------------------------------------------------------------------

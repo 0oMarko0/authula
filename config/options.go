@@ -6,9 +6,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/Authula/authula/env"
-	"github.com/Authula/authula/events"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/env"
+	"github.com/0oMarko0/authula/events"
+	"github.com/0oMarko0/authula/models"
 )
 
 const defaultSecret = "authula-secret-0123456789"

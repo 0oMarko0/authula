@@ -8,10 +8,10 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	"github.com/Authula/authula/plugins/access-control/constants"
-	servicespkg "github.com/Authula/authula/plugins/access-control/services"
-	testshelpers "github.com/Authula/authula/plugins/access-control/tests"
-	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/0oMarko0/authula/plugins/access-control/constants"
+	servicespkg "github.com/0oMarko0/authula/plugins/access-control/services"
+	testshelpers "github.com/0oMarko0/authula/plugins/access-control/tests"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
 )
 
 func newRolePermissionServiceFixture() (*servicespkg.RolePermissionService, *testshelpers.MockRolePermissionRepository) {

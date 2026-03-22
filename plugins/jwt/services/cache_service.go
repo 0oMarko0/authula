@@ -9,8 +9,8 @@ import (
 
 	"github.com/lestrrat-go/jwx/v3/jwk"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/jwt/repositories"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/jwt/repositories"
 )
 
 const jwksCacheKey = "jwks:public:set"

@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/Authula/authula/plugins/access-control/services"
-	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/0oMarko0/authula/plugins/access-control/services"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
 )
 
 func newRolePermissionUseCase(mockRepo *MockRolePermissionService) RolePermissionUseCase {

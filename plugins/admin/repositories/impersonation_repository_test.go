@@ -7,10 +7,10 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/admin/repositories"
-	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/admin/repositories"
+	"github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 func setupImpersonationRepo(t *testing.T) (*repositories.BunImpersonationRepository, *bun.DB, func()) {

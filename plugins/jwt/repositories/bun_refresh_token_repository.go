@@ -9,7 +9,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/plugins/jwt/types"
+	"github.com/0oMarko0/authula/plugins/jwt/types"
 )
 
 type refreshTokenRepositoryImpl struct {

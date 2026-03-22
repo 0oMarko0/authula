@@ -4,12 +4,12 @@ import (
 	"context"
 	"time"
 
-	corerepositories "github.com/Authula/authula/internal/repositories"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/admin/repositories"
-	"github.com/Authula/authula/plugins/admin/services"
-	"github.com/Authula/authula/plugins/admin/types"
-	rootservices "github.com/Authula/authula/services"
+	corerepositories "github.com/0oMarko0/authula/internal/repositories"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/admin/repositories"
+	"github.com/0oMarko0/authula/plugins/admin/services"
+	"github.com/0oMarko0/authula/plugins/admin/types"
+	rootservices "github.com/0oMarko0/authula/services"
 )
 
 type AdminUseCases struct {

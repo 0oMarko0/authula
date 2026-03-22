@@ -3,9 +3,9 @@ package accesscontrol
 import (
 	"context"
 
-	"github.com/Authula/authula/plugins/access-control/repositories"
-	"github.com/Authula/authula/plugins/access-control/types"
-	"github.com/Authula/authula/plugins/access-control/usecases"
+	"github.com/0oMarko0/authula/plugins/access-control/repositories"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
+	"github.com/0oMarko0/authula/plugins/access-control/usecases"
 )
 
 type API struct {

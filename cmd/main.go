@@ -12,11 +12,11 @@ import (
 
 	"github.com/joho/godotenv"
 
-	authula "github.com/Authula/authula"
-	"github.com/Authula/authula/cmd/shared/configloader"
-	authulaenv "github.com/Authula/authula/env"
-	"github.com/Authula/authula/internal/bootstrap"
-	authulamodels "github.com/Authula/authula/models"
+	authula "github.com/0oMarko0/authula"
+	"github.com/0oMarko0/authula/cmd/shared/configloader"
+	authulaenv "github.com/0oMarko0/authula/env"
+	"github.com/0oMarko0/authula/internal/bootstrap"
+	authulamodels "github.com/0oMarko0/authula/models"
 )
 
 func getEnv(key, fallback string) string {

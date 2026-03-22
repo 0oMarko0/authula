@@ -9,9 +9,9 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	"github.com/Authula/authula/plugins/admin/repositories"
-	"github.com/Authula/authula/plugins/admin/tests"
-	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/plugins/admin/repositories"
+	"github.com/0oMarko0/authula/plugins/admin/tests"
+	"github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 func setupRepo(t *testing.T) (*repositories.BunUserStateRepository, func()) {

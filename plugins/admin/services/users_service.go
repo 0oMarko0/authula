@@ -3,11 +3,11 @@ package services
 import (
 	"context"
 
-	repositories "github.com/Authula/authula/internal/repositories"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
-	adminconstants "github.com/Authula/authula/plugins/admin/constants"
-	"github.com/Authula/authula/plugins/admin/types"
+	repositories "github.com/0oMarko0/authula/internal/repositories"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
+	adminconstants "github.com/0oMarko0/authula/plugins/admin/constants"
+	"github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 type UsersService struct {

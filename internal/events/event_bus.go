@@ -12,7 +12,7 @@ import (
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/google/uuid"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 type handlerEntry struct {

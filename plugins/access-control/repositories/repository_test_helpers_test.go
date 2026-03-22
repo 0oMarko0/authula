@@ -9,8 +9,8 @@ import (
 	"github.com/uptrace/bun"
 	"github.com/uptrace/bun/dialect/sqlitedialect"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/access-control/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
 )
 
 func setupRepoDB(t *testing.T) *bun.DB {
@@ -44,10 +44,10 @@ func setupRepoDB(t *testing.T) *bun.DB {
 		t.Fatalf("failed to create access control user roles table: %v", err)
 	}
 
-	if _, err := db.ExecContext(ctx, `INSERT INTO users (id, name, email, email_verified, metadata) VALUES ('u1', 'User One', 'u1@example.com', 1, '{}')`); err != nil {
+	if _, err := db.ExecContext(ctx, `INSERT INTO authula_users (id, name, email, email_verified, metadata) VALUES ('u1', 'User One', 'u1@example.com', 1, '{}')`); err != nil {
 		t.Fatalf("failed to seed user u1: %v", err)
 	}
-	if _, err := db.ExecContext(ctx, `INSERT INTO users (id, name, email, email_verified, metadata) VALUES ('u2', 'User Two', 'u2@example.com', 1, '{}')`); err != nil {
+	if _, err := db.ExecContext(ctx, `INSERT INTO authula_users (id, name, email, email_verified, metadata) VALUES ('u2', 'User Two', 'u2@example.com', 1, '{}')`); err != nil {
 		t.Fatalf("failed to seed user u2: %v", err)
 	}
 

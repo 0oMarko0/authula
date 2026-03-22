@@ -5,8 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
 )
 
 func TestFlushPreservesCookies(t *testing.T) {

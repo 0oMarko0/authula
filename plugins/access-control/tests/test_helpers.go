@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	"github.com/Authula/authula/plugins/access-control/services"
-	"github.com/Authula/authula/plugins/access-control/types"
-	"github.com/Authula/authula/plugins/access-control/usecases"
+	"github.com/0oMarko0/authula/plugins/access-control/services"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
+	"github.com/0oMarko0/authula/plugins/access-control/usecases"
 )
 
 type mockUserAccessRepository struct {

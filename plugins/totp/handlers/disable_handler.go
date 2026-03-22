@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/totp/usecases"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/totp/usecases"
 )
 
 type DisableHandler struct {

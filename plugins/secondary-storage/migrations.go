@@ -5,7 +5,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/migrations"
+	"github.com/0oMarko0/authula/migrations"
 )
 
 func secondaryStorageMigrationsForProvider(provider string) []migrations.Migration {
@@ -23,18 +23,18 @@ func secondaryStorageSQLiteInitial() migrations.Migration {
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`CREATE TABLE IF NOT EXISTS key_value_store (
+				`CREATE TABLE IF NOT EXISTS authula_key_value_store (
   key VARCHAR(255) PRIMARY KEY,
   value TEXT NOT NULL,
   expires_at TIMESTAMP,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );`,
-				`CREATE INDEX IF NOT EXISTS idx_key_value_store_expires_at ON key_value_store(expires_at);`,
+				`CREATE INDEX IF NOT EXISTS idx_key_value_store_expires_at ON authula_key_value_store(expires_at);`,
 			)
 		},
 		Down: func(ctx context.Context, tx bun.Tx) error {
-			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS key_value_store;`)
+			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS authula_key_value_store;`)
 		},
 	}
 }
@@ -53,17 +53,17 @@ BEGIN
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;`,
-				`CREATE TABLE IF NOT EXISTS key_value_store (
+				`CREATE TABLE IF NOT EXISTS authula_key_value_store (
   key VARCHAR(255) PRIMARY KEY,
   value TEXT NOT NULL,
   expires_at TIMESTAMP WITH TIME ZONE,
   created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW()
 );`,
-				`CREATE INDEX IF NOT EXISTS idx_key_value_store_expires_at ON key_value_store(expires_at);`,
-				`DROP TRIGGER IF EXISTS key_value_store_update_updated_at_trigger ON key_value_store;`,
+				`CREATE INDEX IF NOT EXISTS idx_key_value_store_expires_at ON authula_key_value_store(expires_at);`,
+				`DROP TRIGGER IF EXISTS key_value_store_update_updated_at_trigger ON authula_key_value_store;`,
 				`CREATE TRIGGER key_value_store_update_updated_at_trigger
-  BEFORE UPDATE ON key_value_store
+  BEFORE UPDATE ON authula_key_value_store
   FOR EACH ROW
   EXECUTE FUNCTION key_value_store_update_updated_at_func();`,
 			)
@@ -72,8 +72,8 @@ $$ LANGUAGE plpgsql;`,
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`DROP TRIGGER IF EXISTS key_value_store_update_updated_at_trigger ON key_value_store;`,
-				`DROP TABLE IF EXISTS key_value_store;`,
+				`DROP TRIGGER IF EXISTS key_value_store_update_updated_at_trigger ON authula_key_value_store;`,
+				`DROP TABLE IF EXISTS authula_key_value_store;`,
 			)
 		},
 	}
@@ -86,7 +86,7 @@ func secondaryStorageMySQLInitial() migrations.Migration {
 			return migrations.ExecStatements(
 				ctx,
 				tx,
-				`CREATE TABLE IF NOT EXISTS key_value_store (
+				`CREATE TABLE IF NOT EXISTS authula_key_value_store (
 	key VARCHAR(255) PRIMARY KEY,
 	value LONGTEXT NOT NULL,
 	expires_at TIMESTAMP NULL,
@@ -97,7 +97,7 @@ func secondaryStorageMySQLInitial() migrations.Migration {
 			)
 		},
 		Down: func(ctx context.Context, tx bun.Tx) error {
-			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS key_value_store;`)
+			return migrations.ExecStatements(ctx, tx, `DROP TABLE IF EXISTS authula_key_value_store;`)
 		},
 	}
 }

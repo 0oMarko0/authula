@@ -21,7 +21,7 @@ func (r RateLimitProviderType) String() string {
 
 // RateLimit represents a rate limit entry in the database for Bun ORM
 type RateLimit struct {
-	bun.BaseModel `bun:"table:rate_limits"`
+	bun.BaseModel `bun:"table:authula_rate_limits"`
 
 	Key       string    `json:"key" bun:"column:key,pk"`
 	Count     int       `json:"count" bun:"column:count"`

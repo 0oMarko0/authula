@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/Authula/authula/internal/repositories"
-	"github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal/repositories"
+	"github.com/0oMarko0/authula/services"
 )
 
 // TokenServiceImpl implements TokenService

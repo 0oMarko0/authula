@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/magic-link/types"
-	rootservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/magic-link/types"
+	rootservices "github.com/0oMarko0/authula/services"
 )
 
 type SignInUseCaseImpl struct {

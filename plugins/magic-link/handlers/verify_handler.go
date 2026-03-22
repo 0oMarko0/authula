@@ -6,9 +6,9 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/magic-link/types"
-	"github.com/Authula/authula/plugins/magic-link/usecases"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/magic-link/types"
+	"github.com/0oMarko0/authula/plugins/magic-link/usecases"
 )
 
 type VerifyHandler struct {

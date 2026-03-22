@@ -7,8 +7,8 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/plugins/totp/types"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/plugins/totp/types"
 )
 
 type TOTPRepository struct {

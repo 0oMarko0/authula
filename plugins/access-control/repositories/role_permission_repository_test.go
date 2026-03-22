@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	internaltests "github.com/Authula/authula/internal/tests"
-	"github.com/Authula/authula/plugins/access-control/types"
+	internaltests "github.com/0oMarko0/authula/internal/tests"
+	"github.com/0oMarko0/authula/plugins/access-control/types"
 )
 
 func TestBunRolePermissionRepositoryRoleCRUDAndAssignmentCount(t *testing.T) {

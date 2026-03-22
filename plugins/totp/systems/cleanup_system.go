@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/totp/types"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/totp/types"
 )
 
 // TrustedDeviceRepository is the subset of the TOTP repository required by the cleanup system.

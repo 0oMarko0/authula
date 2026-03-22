@@ -3,7 +3,7 @@ package models
 import (
 	"time"
 
-	"github.com/Authula/authula/events"
+	"github.com/0oMarko0/authula/events"
 )
 
 // Config holds the core configuration for Authula.

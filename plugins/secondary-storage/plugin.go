@@ -4,10 +4,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/Authula/authula/env"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/migrations"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/env"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/migrations"
+	"github.com/0oMarko0/authula/models"
 )
 
 type SecondaryStoragePlugin struct {

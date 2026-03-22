@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	rootservices "github.com/Authula/authula/services"
+	rootservices "github.com/0oMarko0/authula/services"
 )
 
 const backupCodeLength = 12

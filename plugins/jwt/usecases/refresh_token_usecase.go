@@ -3,8 +3,8 @@ package usecases
 import (
 	"context"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/jwt/services"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/jwt/services"
 )
 
 type RefreshTokenUseCaseImpl struct {

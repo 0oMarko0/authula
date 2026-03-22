@@ -3,9 +3,9 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/Authula/authula/internal/usecases"
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/internal/usecases"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
 )
 
 type SignOutRequestPayload struct {

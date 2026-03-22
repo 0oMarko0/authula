@@ -1,6 +1,6 @@
 package secondarystorage
 
-import "github.com/Authula/authula/models"
+import "github.com/0oMarko0/authula/models"
 
 // SecondaryStorageAPI is the API exposed by the secondary storage plugin
 type SecondaryStorageAPI interface {

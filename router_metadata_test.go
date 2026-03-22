@@ -6,8 +6,8 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
 )
 
 // TestRouteMetadataPopulation verifies that route metadata is properly assigned to RequestContext

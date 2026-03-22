@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/Authula/authula/plugins/admin/constants"
-	"github.com/Authula/authula/plugins/admin/repositories"
-	"github.com/Authula/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/plugins/admin/constants"
+	"github.com/0oMarko0/authula/plugins/admin/repositories"
+	"github.com/0oMarko0/authula/plugins/admin/types"
 )
 
 type StateService struct {

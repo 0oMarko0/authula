@@ -7,7 +7,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/plugins/config-manager/types"
+	"github.com/0oMarko0/authula/plugins/config-manager/types"
 )
 
 type bunConfigManagerRepository struct {

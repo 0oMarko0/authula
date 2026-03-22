@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/email-password/types"
-	"github.com/Authula/authula/plugins/email-password/usecases"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/email-password/types"
+	"github.com/0oMarko0/authula/plugins/email-password/usecases"
 )
 
 type SignUpRequestPayload struct {

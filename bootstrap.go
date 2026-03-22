@@ -4,16 +4,16 @@ import (
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/events"
-	internalbootstrap "github.com/Authula/authula/internal/bootstrap"
-	internalevents "github.com/Authula/authula/internal/events"
-	internalrepositories "github.com/Authula/authula/internal/repositories"
-	internalsecurity "github.com/Authula/authula/internal/security"
-	internalservices "github.com/Authula/authula/internal/services"
-	internalsystemssession "github.com/Authula/authula/internal/systems/session"
-	internalsystemsverification "github.com/Authula/authula/internal/systems/verification"
-	"github.com/Authula/authula/models"
-	coreservices "github.com/Authula/authula/services"
+	"github.com/0oMarko0/authula/events"
+	internalbootstrap "github.com/0oMarko0/authula/internal/bootstrap"
+	internalevents "github.com/0oMarko0/authula/internal/events"
+	internalrepositories "github.com/0oMarko0/authula/internal/repositories"
+	internalsecurity "github.com/0oMarko0/authula/internal/security"
+	internalservices "github.com/0oMarko0/authula/internal/services"
+	internalsystemssession "github.com/0oMarko0/authula/internal/systems/session"
+	internalsystemsverification "github.com/0oMarko0/authula/internal/systems/verification"
+	"github.com/0oMarko0/authula/models"
+	coreservices "github.com/0oMarko0/authula/services"
 )
 
 // InitLogger initializes the logger based on configuration

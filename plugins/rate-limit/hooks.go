@@ -1,7 +1,7 @@
 package ratelimit
 
 import (
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 // buildHooks returns the configured hooks for this plugin

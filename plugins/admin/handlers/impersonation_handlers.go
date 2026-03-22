@@ -3,10 +3,10 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/Authula/authula/internal/util"
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/admin/types"
-	"github.com/Authula/authula/plugins/admin/usecases"
+	"github.com/0oMarko0/authula/internal/util"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/admin/types"
+	"github.com/0oMarko0/authula/plugins/admin/usecases"
 )
 
 type GetAllImpersonationsHandler struct {

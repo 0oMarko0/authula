@@ -9,19 +9,19 @@ import (
 	"github.com/gofiber/fiber/v3"
 	"github.com/gofiber/fiber/v3/middleware/logger"
 
-	authula "github.com/Authula/authula"
-	"github.com/Authula/authula/config"
-	"github.com/Authula/authula/models"
+	authula "github.com/0oMarko0/authula"
+	"github.com/0oMarko0/authula/config"
+	"github.com/0oMarko0/authula/models"
 
-	fiberadapter "github.com/Authula/authula/adapters/fiber"
+	fiberadapter "github.com/0oMarko0/authula/adapters/fiber"
 
-	emailpasswordplugin "github.com/Authula/authula/plugins/email-password"
-	emailpasswordplugintypes "github.com/Authula/authula/plugins/email-password/types"
+	emailpasswordplugin "github.com/0oMarko0/authula/plugins/email-password"
+	emailpasswordplugintypes "github.com/0oMarko0/authula/plugins/email-password/types"
 
-	emailplugin "github.com/Authula/authula/plugins/email"
-	emailplugintypes "github.com/Authula/authula/plugins/email/types"
+	emailplugin "github.com/0oMarko0/authula/plugins/email"
+	emailplugintypes "github.com/0oMarko0/authula/plugins/email/types"
 
-	sessionplugin "github.com/Authula/authula/plugins/session"
+	sessionplugin "github.com/0oMarko0/authula/plugins/session"
 )
 
 func main() {

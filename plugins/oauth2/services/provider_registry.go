@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/Authula/authula/plugins/oauth2/types"
+	"github.com/0oMarko0/authula/plugins/oauth2/types"
 )
 
 // ProviderRegistry manages OAuth2 providers

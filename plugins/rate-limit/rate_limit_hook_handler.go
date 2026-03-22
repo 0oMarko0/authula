@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 type RateLimitHookHandler struct {

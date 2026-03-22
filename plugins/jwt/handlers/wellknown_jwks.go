@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/Authula/authula/models"
-	"github.com/Authula/authula/plugins/jwt/usecases"
+	"github.com/0oMarko0/authula/models"
+	"github.com/0oMarko0/authula/plugins/jwt/usecases"
 )
 
 type WellKnownJWKSHandler struct {

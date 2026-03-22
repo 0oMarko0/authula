@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Authula/authula/models"
+	"github.com/0oMarko0/authula/models"
 )
 
 type blacklistService struct {

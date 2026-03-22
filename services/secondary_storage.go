@@ -1,6 +1,6 @@
 package services
 
-import "github.com/Authula/authula/models"
+import "github.com/0oMarko0/authula/models"
 
 // SecondaryStorageService provides access to the configured secondary storage backend
 type SecondaryStorageService interface {

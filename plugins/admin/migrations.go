@@ -5,7 +5,7 @@ import (
 
 	"github.com/uptrace/bun"
 
-	"github.com/Authula/authula/migrations"
+	"github.com/0oMarko0/authula/migrations"
 )
 
 func adminMigrationsForProvider(provider string) []migrations.Migration {
@@ -37,11 +37,11 @@ func adminSQLiteInitial() migrations.Migration {
           ended_by_user_id TEXT,
           created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-          FOREIGN KEY (actor_user_id) REFERENCES users(id) ON DELETE CASCADE,
-          FOREIGN KEY (target_user_id) REFERENCES users(id) ON DELETE CASCADE,
-          FOREIGN KEY (ended_by_user_id) REFERENCES users(id) ON DELETE SET NULL,
-          FOREIGN KEY (actor_session_id) REFERENCES sessions(id) ON DELETE SET NULL,
-          FOREIGN KEY (impersonation_session_id) REFERENCES sessions(id) ON DELETE SET NULL,
+          FOREIGN KEY (actor_user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
+          FOREIGN KEY (target_user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
+          FOREIGN KEY (ended_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
+          FOREIGN KEY (actor_session_id) REFERENCES authula_sessions(id) ON DELETE SET NULL,
+          FOREIGN KEY (impersonation_session_id) REFERENCES authula_sessions(id) ON DELETE SET NULL,
           CHECK (actor_user_id != target_user_id)
         );`,
 				`CREATE INDEX IF NOT EXISTS idx_admin_impersonations_actor_user_id ON admin_impersonations(actor_user_id);`,
@@ -56,8 +56,8 @@ func adminSQLiteInitial() migrations.Migration {
           banned_by_user_id TEXT,
           created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-          FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-          FOREIGN KEY (banned_by_user_id) REFERENCES users(id) ON DELETE SET NULL
+          FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
+          FOREIGN KEY (banned_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL
         );`,
 				`CREATE INDEX IF NOT EXISTS idx_admin_user_states_banned_banned_until ON admin_user_states(banned, banned_until);`,
 				`CREATE TABLE IF NOT EXISTS admin_session_states (
@@ -70,9 +70,9 @@ func adminSQLiteInitial() migrations.Migration {
           impersonation_expires_at TIMESTAMP,
           created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-          FOREIGN KEY (session_id) REFERENCES sessions(id) ON DELETE CASCADE,
-          FOREIGN KEY (revoked_by_user_id) REFERENCES users(id) ON DELETE SET NULL,
-          FOREIGN KEY (impersonator_user_id) REFERENCES users(id) ON DELETE SET NULL
+          FOREIGN KEY (session_id) REFERENCES authula_sessions(id) ON DELETE CASCADE,
+          FOREIGN KEY (revoked_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
+          FOREIGN KEY (impersonator_user_id) REFERENCES authula_users(id) ON DELETE SET NULL
         );`,
 				`CREATE INDEX IF NOT EXISTS idx_admin_session_states_revoked_at_impersonation_expires_at ON admin_session_states(revoked_at, impersonation_expires_at);`,
 				`CREATE INDEX IF NOT EXISTS idx_admin_session_states_impersonator_user_id ON admin_session_states(impersonator_user_id);`,
@@ -116,11 +116,11 @@ func adminPostgresInitial() migrations.Migration {
           ended_by_user_id UUID,
           created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
           updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
-          CONSTRAINT fk_admin_impersonations_actor_user FOREIGN KEY (actor_user_id) REFERENCES users(id) ON DELETE CASCADE,
-          CONSTRAINT fk_admin_impersonations_target_user FOREIGN KEY (target_user_id) REFERENCES users(id) ON DELETE CASCADE,
-          CONSTRAINT fk_admin_impersonations_ended_by_user FOREIGN KEY (ended_by_user_id) REFERENCES users(id) ON DELETE SET NULL,
-          CONSTRAINT fk_admin_impersonations_actor_session FOREIGN KEY (actor_session_id) REFERENCES sessions(id) ON DELETE SET NULL,
-          CONSTRAINT fk_admin_impersonations_impersonation_session FOREIGN KEY (impersonation_session_id) REFERENCES sessions(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_impersonations_actor_user FOREIGN KEY (actor_user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
+          CONSTRAINT fk_admin_impersonations_target_user FOREIGN KEY (target_user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
+          CONSTRAINT fk_admin_impersonations_ended_by_user FOREIGN KEY (ended_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_impersonations_actor_session FOREIGN KEY (actor_session_id) REFERENCES authula_sessions(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_impersonations_impersonation_session FOREIGN KEY (impersonation_session_id) REFERENCES authula_sessions(id) ON DELETE SET NULL,
           CONSTRAINT chk_admin_impersonation_actor_target CHECK (actor_user_id <> target_user_id)
         );`,
 				`DROP TRIGGER IF EXISTS update_admin_impersonations_updated_at_trigger ON admin_impersonations;`,
@@ -140,8 +140,8 @@ func adminPostgresInitial() migrations.Migration {
           banned_by_user_id UUID,
           created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
           updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
-          CONSTRAINT fk_admin_user_states_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-          CONSTRAINT fk_admin_user_states_banned_by FOREIGN KEY (banned_by_user_id) REFERENCES users(id) ON DELETE SET NULL
+          CONSTRAINT fk_admin_user_states_user FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
+          CONSTRAINT fk_admin_user_states_banned_by FOREIGN KEY (banned_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL
         );`,
 				`DROP TRIGGER IF EXISTS update_admin_user_states_updated_at_trigger ON admin_user_states;`,
 				`CREATE TRIGGER update_admin_user_states_updated_at_trigger
@@ -159,9 +159,9 @@ func adminPostgresInitial() migrations.Migration {
           impersonation_expires_at TIMESTAMP WITH TIME ZONE,
           created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
           updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
-          CONSTRAINT fk_admin_session_states_session FOREIGN KEY (session_id) REFERENCES sessions(id) ON DELETE CASCADE,
-          CONSTRAINT fk_admin_session_states_revoked_by FOREIGN KEY (revoked_by_user_id) REFERENCES users(id) ON DELETE SET NULL,
-          CONSTRAINT fk_admin_session_states_impersonator FOREIGN KEY (impersonator_user_id) REFERENCES users(id) ON DELETE SET NULL
+          CONSTRAINT fk_admin_session_states_session FOREIGN KEY (session_id) REFERENCES authula_sessions(id) ON DELETE CASCADE,
+          CONSTRAINT fk_admin_session_states_revoked_by FOREIGN KEY (revoked_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_session_states_impersonator FOREIGN KEY (impersonator_user_id) REFERENCES authula_users(id) ON DELETE SET NULL
         );`,
 				`DROP TRIGGER IF EXISTS update_admin_session_states_updated_at_trigger ON admin_session_states;`,
 				`CREATE TRIGGER update_admin_session_states_updated_at_trigger
@@ -208,11 +208,11 @@ func adminMySQLInitial() migrations.Migration {
           ended_by_user_id BINARY(16) NULL,
           created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-          CONSTRAINT fk_admin_impersonations_actor_user FOREIGN KEY (actor_user_id) REFERENCES users(id) ON DELETE CASCADE,
-          CONSTRAINT fk_admin_impersonations_target_user FOREIGN KEY (target_user_id) REFERENCES users(id) ON DELETE CASCADE,
-          CONSTRAINT fk_admin_impersonations_actor_session FOREIGN KEY (actor_session_id) REFERENCES sessions(id) ON DELETE SET NULL,
-          CONSTRAINT fk_admin_impersonations_impersonation_session FOREIGN KEY (impersonation_session_id) REFERENCES sessions(id) ON DELETE SET NULL,
-          CONSTRAINT fk_admin_impersonations_ended_by_user FOREIGN KEY (ended_by_user_id) REFERENCES users(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_impersonations_actor_user FOREIGN KEY (actor_user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
+          CONSTRAINT fk_admin_impersonations_target_user FOREIGN KEY (target_user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
+          CONSTRAINT fk_admin_impersonations_actor_session FOREIGN KEY (actor_session_id) REFERENCES authula_sessions(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_impersonations_impersonation_session FOREIGN KEY (impersonation_session_id) REFERENCES authula_sessions(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_impersonations_ended_by_user FOREIGN KEY (ended_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
           CONSTRAINT chk_admin_impersonation_actor_target CHECK (actor_user_id <> target_user_id),
           INDEX idx_admin_impersonations_actor_user_id (actor_user_id),
           INDEX idx_admin_impersonations_target_user_id (target_user_id),
@@ -227,8 +227,8 @@ func adminMySQLInitial() migrations.Migration {
           banned_by_user_id BINARY(16) NULL,
           created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-          CONSTRAINT fk_admin_user_states_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-          CONSTRAINT fk_admin_user_states_banned_by FOREIGN KEY (banned_by_user_id) REFERENCES users(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_user_states_user FOREIGN KEY (user_id) REFERENCES authula_users(id) ON DELETE CASCADE,
+          CONSTRAINT fk_admin_user_states_banned_by FOREIGN KEY (banned_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
           INDEX idx_admin_user_states_banned_banned_until (banned, banned_until)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;`,
 				`CREATE TABLE IF NOT EXISTS admin_session_states (
@@ -241,9 +241,9 @@ func adminMySQLInitial() migrations.Migration {
           impersonation_expires_at TIMESTAMP NULL,
           created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
           updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-          CONSTRAINT fk_admin_session_states_session FOREIGN KEY (session_id) REFERENCES sessions(id) ON DELETE CASCADE,
-          CONSTRAINT fk_admin_session_states_revoked_by FOREIGN KEY (revoked_by_user_id) REFERENCES users(id) ON DELETE SET NULL,
-          CONSTRAINT fk_admin_session_states_impersonator FOREIGN KEY (impersonator_user_id) REFERENCES users(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_session_states_session FOREIGN KEY (session_id) REFERENCES authula_sessions(id) ON DELETE CASCADE,
+          CONSTRAINT fk_admin_session_states_revoked_by FOREIGN KEY (revoked_by_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
+          CONSTRAINT fk_admin_session_states_impersonator FOREIGN KEY (impersonator_user_id) REFERENCES authula_users(id) ON DELETE SET NULL,
           INDEX idx_admin_session_states_revoked_at_impersonation_expires_at (revoked_at, impersonation_expires_at),
           INDEX idx_admin_session_states_impersonator_user_id (impersonator_user_id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;`,

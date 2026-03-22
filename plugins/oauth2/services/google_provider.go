@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/Authula/authula/plugins/oauth2/types"
+	"github.com/0oMarko0/authula/plugins/oauth2/types"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 )
