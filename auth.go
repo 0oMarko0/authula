@@ -2,11 +2,13 @@ package authula
 
 import (
 	"context"
+	"database/sql"
 	"fmt"
 	"net/http"
 	"sync"
 
 	"github.com/uptrace/bun"
+	"github.com/uptrace/bun/dialect/pgdialect"
 
 	"github.com/0oMarko0/authula/internal"
 	"github.com/0oMarko0/authula/internal/migrationmanager"
@@ -21,6 +23,7 @@ type AuthConfig struct {
 	Config  *models.Config
 	Plugins []models.Plugin
 	DB      bun.IDB
+	SQLDb   *sql.DB
 }
 
 // Auth is a composition root and entry point for the authentication framework.
@@ -51,8 +54,12 @@ func New(authConfig *AuthConfig) *Auth {
 
 	logger := InitLogger(authConfig.Config)
 
-	db := authConfig.DB
-	if db == nil {
+	var db bun.IDB
+	if authConfig.SQLDb != nil {
+		db = bun.NewDB(authConfig.SQLDb, pgdialect.New())
+	}
+
+	if authConfig.SQLDb == nil && authConfig.DB == nil {
 		initializedDB, err := InitDatabase(authConfig.Config, logger, authConfig.Config.Logger.Level)
 		if err != nil {
 			panic(fmt.Errorf("failed to initialize database: %w", err))
