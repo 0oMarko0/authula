@@ -24,6 +24,7 @@ type AuthConfig struct {
 	Plugins []models.Plugin
 	DB      bun.IDB
 	SQLDb   *sql.DB
+	Logger  models.Logger
 }
 
 // Auth is a composition root and entry point for the authentication framework.
@@ -52,7 +53,12 @@ func New(authConfig *AuthConfig) *Auth {
 
 	util.InitValidator()
 
-	logger := InitLogger(authConfig.Config)
+	var logger models.Logger
+	if authConfig.Logger != nil {
+		logger = authConfig.Logger
+	} else {
+		logger = InitLogger(authConfig.Config)
+	}
 
 	var db bun.IDB
 	if authConfig.SQLDb != nil {
