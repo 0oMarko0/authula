@@ -140,8 +140,12 @@ func (p *SessionPlugin) validateSessionCookie(r *http.Request) (*models.Session,
 	}
 
 	session, err := p.sessionService.GetByToken(r.Context(), p.tokenService.Hash(cookie.Value))
-	if err != nil || session == nil {
+	if err != nil {
 		return nil, err
+	}
+
+	if session == nil {
+		return nil, fmt.Errorf("session cookie not found")
 	}
 
 	if session.ExpiresAt.Before(time.Now().UTC()) {
